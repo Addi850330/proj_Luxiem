@@ -1,0 +1,761 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.mc-bg{
+    /* height: 100vh; */
+    background-color: black;
+    position: relative;
+    /* overflow: hidden; */
+}
+.container{
+    width: 100%;
+    background: linear-gradient(#ffffff, #D3B572);
+    /* height: 100vh; */
+    padding-top: 25%;
+    /* 這裡調整高度 */
+    padding-bottom: 20px;
+}
+.try-design{
+    background-color: #ffffff9c;
+    padding-top: 40px;
+    border-radius: 8px;
+    position: relative;
+    /* outline: 1px solid red; */
+}
+.try-design::after{
+    content:"喜好收藏";
+    font-weight: 500; 
+    text-align: center;
+    line-height: 30px;
+    color: #D3B572;
+    background-color: rgb(0, 0, 0);
+    width: 110px;
+    height: 34px;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+}
+.try-design::before{
+    content:"";
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid black;
+    width: 110px;
+    height: 34px;
+    position: absolute;
+    top: -10px;
+    left: 0px;
+}
+
+
+/* 下拉式篩選器 */
+.item-follow-select-wrap {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 23%;
+    /* outline: 1px solid red; */
+    border-bottom: 1px solid #D3B572;
+}
+.dropdown-menu {
+    min-width: 0rem
+}
+.dropdown-item {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.item-follow-select a {
+    color: #667080;
+    font-size: 12px;
+}
+.item-follow-select:hover a {
+    color: #D3B572;
+}
+.item-follow-select-list a {
+    font-size: 12px;
+}
+
+
+/* Hashtags */
+.item-follow-tag{
+    /* outline: 1px solid red; */
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.item-follow-tag button{
+    /* outline: 1px solid red; */
+    width: 58px;
+    height: 25px;
+    color: #667080;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    font-size: 12px;
+    vertical-align: middle;
+    font-weight: 500;
+}
+.item-follow-tag button:hover {
+    background-color: #D3B572;
+    border: 1px solid #D3B572;
+    color: rgb(255, 255, 255);
+}
+
+/* 喜好收藏 配件清單列表 */
+
+.item-follow-item-unit {
+    /* outline: 1px solid red; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.item-follow-item-imgwrap {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #667080;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.item-follow-item-imgwrap img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Checkbox */
+.control {  
+    /* outline: 1px solid red; */
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-top: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+}
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.control__indicator {
+    /* outline: 1px solid red; */
+    position: absolute;
+    top: 1.5px;
+    left: 2px;
+    height: 15px;
+    width: 15px;
+    border: 1.5px solid #D3B572;
+    border-radius: 10%;
+}
+
+/* Checked */
+.control input:checked ~ .control__indicator {
+    /* background: #2aa1c0; */
+    background: #D3B572;
+}
+
+/* Hide default browser input */
+.control input:disabled ~ .control__indicator {
+    /* background: #e6e6e6; */
+    background: #EEF1F4;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+    /* Hide check */
+}
+.control input:checked ~ .control__indicator:after {
+    display: block;
+    /* Show check */
+}
+/* Checkbox tick */
+.control--checkbox .control__indicator:after {
+    /* outline: 1px solid red; */
+    left: 3px;
+    top: 0px;
+    width: 6px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+/* Disabled tick colour  */
+.control--checkbox input:disabled ~ .control__indicator:after {
+    border-color: #7b7b7b;
+}
+
+/* 配件類型和info icon */
+.desktop-item-follow-item-unit {
+    display: none;
+}
+.item-follow-item-type-and-info {
+    /* outline: 1px solid red; */
+    padding: 0 1px;
+}
+.item-follow-item-type-and-info svg {
+    /* outline: 1px solid red; */
+    margin-bottom: 3px;
+    width: 18px;
+    height: 18px;
+}
+.item-follow-item-type {
+    font-size: 12px;
+    padding-right: 2px;
+}
+
+.fitem-follow-items-list-row1 {
+    /* outline: 1px solid red; */
+    padding: 0 20px;
+    margin-top: 25px;
+}
+
+/* 頁碼 資料寫入2 */
+.item-follow-page {
+    /* outline: 1px solid red; */
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+.item-follow-page i {
+    /* color: #D3B572; */
+    color: #000;
+    width: 20px;
+    height: 20px;
+    padding: 5px 9px;
+}
+.item-follow-page a {
+    font-size: 14px;
+    color: #000;
+    padding: 0 9px;
+}
+
+/* 購買或刪除按鈕 */
+.item-follow-btn-group {
+    /* outline: 1px solid red; */
+    padding-bottom: 40px;
+    justify-content: center;
+}
+
+.item-follow-btn {
+    background-color: #000;
+    border-radius: 5px;
+    color: #D3B572;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.item-follow-btn:hover {
+    background-color: #D3B572;
+    color: #fff;
+}
+a.item-follow-btn:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------- */
+.sign-in-footer{
+    text-align: center;
+    position: relative;
+    align-items: center;
+    margin-top: 15%;
+}   
+.sign-in-footer::before{
+    display: block;
+    content: "";
+    width: 470px;
+    height: 2px;
+    background-color: #D3B572;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sign-in-footer::after{
+    display: block;
+    content: "";
+    width: 470px;
+    height: 2px;
+    background-color: #D3B572;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sign-in-footer p{
+    color: #D3B572;
+}
+.sign-in-footer p a{
+    color: #D3B572;
+}
+/* 1920---- */
+.sing-in-img{
+    position: absolute;
+    top: 0px;
+    display: none;
+}
+.luxiem-logo{
+    margin-left: 50%;
+    margin-top: 25%;
+}
+.sign-in-logo{
+    margin-left: 60%;
+    margin-top: 40px;
+}
+.sign-in-text{
+    width: 270px;
+    margin-left: 83%;
+    margin-top: 10px;
+    color: #D3B572;
+}
+.sign-in-text h3{
+    font-weight: 700;
+    font-size: 48px;
+}
+.sign-in-img div{
+    position: absolute
+}
+.sign-in-img div img{
+    width: 100%;
+}
+.sign-in-img1{
+    width: 528px;
+    position: absolute;
+    left:75%;
+    top: 115%;
+}
+.sign-in-img2{
+    width: 190px;
+    position: absolute;
+    left: 75%;
+    top:165%;
+    animation: roll3 3s linear infinite;
+}
+@keyframes roll3{
+	0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+	100% { transform: rotate(0deg); }
+}
+.side_nav_wrap{
+    display: none;
+}
+
+
+.item-followed-hide {
+    display: none;
+}
+
+
+
+
+
+
+/* ---RWD桌機版：1920px--- */
+@media screen and (min-width: 1600px) {
+    .container {
+        /* outline: 1px solid red; */
+        max-width: 1200px;
+        margin-right: 0;
+        clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+        position: relative;
+        /* 調整內容物高度 */
+        padding-top: 10%;
+        padding-bottom: 50px;
+    }
+    .try-design{
+        /* outline: 1px solid red; */
+        width: 640px;
+        margin-left: 20%;
+    }
+    .try-design::after {
+        /* outline: 1px solid red; */
+        font-size: 20px;
+        line-height: 60px;
+        top: -40px;
+        left: -30px;
+        width: 128px;
+        height: 60px;
+    }
+    .try-design::before {
+        /* outline: 1px solid red; */
+        top: -30px;
+        left: -20px;
+        width: 128px;
+        height: 60px;
+    }
+
+    /* 下拉式篩選器 */
+    .item-follow-select-wrap {
+        position: absolute;
+        right: 30px;
+        top: 10px;
+        width: 120px;
+        /* outline: 1px solid red; */
+    }
+    .dropdown-item {
+        padding-right: 20px;
+        padding-left: 20px;
+        line-height: 30px;
+    }
+    .item-follow-select a {
+        color: #667080;
+        font-size: 14px;
+    }
+    .item-follow-select-list a {
+        font-size: 14px;
+    }
+
+    /* Hashtags */
+    .item-follow-tag {
+        justify-content: flex-start;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        margin-left: 60px;
+    }
+    
+    .item-follow-tag button {
+        width: 75px;
+        height: 35px;
+        border-radius: 24px;
+        font-size: 14px;
+        margin-right: 30px;
+    }
+
+
+    /* 喜好收藏 配件清單列表 */
+    .desktop-item-follow-item-unit {
+        display: block;
+    }
+    .item-follow-item-unit {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .item-follow-item-unit-hide {
+        display: none;
+    }
+    .item-follow-item-imgwrap {
+        width: 100px;
+        height: 100px;
+    }
+    /* Checkbox */
+    .control {
+        font-size: 14px;
+        padding-left: 41px;
+        margin-top: 12px;
+        margin-bottom: 0.3rem
+    }
+    .control__indicator {
+        width: 17px;
+        height: 17px;
+        top: 2px;
+        left: 1.5px;
+    }
+    .control--checkbox .control__indicator:after {
+        left: 3.5px;
+        top: -1px;
+        width: 7px;
+        height: 12px;
+    }
+
+    /* 配件類型和info icon */
+    .item-follow-item-type-and-info {
+        /* outline: 1px solid red; */
+        padding: 0px;
+    }
+    .item-follow-item-type-and-info svg {
+        /* outline: 1px solid red; */
+        margin-bottom: 3px;
+        width: 20px;
+        height: 20px;
+    }
+    .item-follow-item-type {
+        font-size: 12px;
+        padding-right: 5px;
+    }
+
+    .fitem-follow-items-list-row1 {
+        /* outline: 1px solid red; */
+        padding: 0 60px;
+        margin-top: 32px;
+    }
+
+    /* 頁碼 資料寫入2 */
+    .item-follow-page {
+        /* outline: 1px solid red; */
+        margin-top: 40px;
+        padding-bottom: 50px;
+    }
+    .item-follow-page a {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    /* 購買或刪除按鈕 */
+    .item-follow-btn-group {
+        /* outline: 1px solid red; */
+        padding-bottom: 60px;
+        justify-content: flex-end;
+        margin-right: 45px;
+    }
+    .item-follow-btn {
+        font-size: 16px;
+        padding: 8px 19px;
+    }
+    /* ------------side nav------------- */
+.side_nav_wrap{
+    position: absolute;
+    top: 130px;
+    left: 400px;
+    display: block;
+}
+.side_nav_upper{
+    position: relative
+}
+.side_nav_down{
+    position: relative
+}
+
+.vertical_line{
+    position: absolute;
+    top: 16px;
+    left: 8px;
+}
+
+.side.nav{
+    display:flex;
+}
+
+.side_nav_ticket{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.hex_icon {
+    margin-right:30px;
+    margin-bottom:1px;
+
+}
+
+.side_nav_text {
+    width: 170px; 
+    position: relative;
+    display:inline-block;
+    padding: 8px 24px;
+    border: 0; margin-bottom: 15px;
+    background: transparent;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.side_nav_text::before {
+    content: ''; /* To generate the box */
+    position: absolute;
+    top: 0; right:0 ; bottom: 0; left:0 ;
+    z-index: 2;
+    border: #D3B572 1px solid;
+    transform: skew(-25deg);
+} 
+.side_nav_ticket:hover .side_nav_text::before{
+    background: linear-gradient(#ffffff00, #D3B572);
+}
+.side_nav_ticket:hover .h1{
+    color: #ffffff;
+}
+.side_nav_ticket:nth-child(4) .side_nav_text::before{
+    background: linear-gradient(#ffffff00, #D3B572);
+}
+.side_nav_ticket:nth-child(4) .h1{
+    color: #ffffff;
+}
+  .h1 {
+    font-size: 20px;
+    /* padding: 8px 24px; */
+    margin: 30px 0;
+    text-transform: uppercase;
+    color: #D3B572;
+  }
+
+/* news wrap */
+.news_wrap{
+    margin-top:40px;
+    display: flex;
+}
+
+.news_wrap_left_deco{
+    position: absolute;
+    left:-37px;
+}
+
+.news_img_wrap{
+    border:#D3B572 1px solid;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.news_img_wrap img{
+    width: 100%;;
+    overflow: hidden;
+    object-fit: contain;
+}
+}
+
+.item-follow-item-unit-show {
+    display: block;
+}
+
+
+
+
+/* 是否刪除勾選的配件?（光箱頁）------------------- */
+.addfollow-sure-delete-item {
+    /* width: 350vh; */
+    width: 100vw;
+    height: 150vh;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 3;
+    /* outline: 1px solid red; */
+    display: none;
+}
+.addfollow-sure-delete-item-show {
+    display: block;
+}
+
+.addfollow-sure-delete-item-wrap {
+    width: 95%;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.addfollow-sure-delete-item-name {
+    /* outline: 1px solid red; */
+    color: #000;
+    margin-top: 35px;
+}
+
+.addfollow-sure-delete-item-name p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.addfollow-sure-delete-item-text {
+    /* outline: 1px solid red; */
+    font-size: 14px;
+    color: #667080;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 35px;
+    line-height: 25px;
+}
+
+/* 按鈕 */
+
+.checkout {
+    height: auto;
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+.checkout button {
+    border: 0;
+    margin-top: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 13px 24px;
+    background-color: #D3B572;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 8px 24px;
+}
+
+.checkout button:hover {
+    background-color: #667080;
+}
+
+
+
+/* 關閉叉叉按鈕 */
+.addfollow-sure-delete-item-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.addfollow-sure-delete-item-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+
+/* ---RWD桌機版：1920px--- */
+@media screen and (min-width: 1600px) {
+    .addfollow-sure-delete-item-wrap {
+        /* outline: 1px solid red; */
+        width: 25%;
+        height: 300px;
+    }
+
+    .addfollow-sure-delete-item-name p {
+        font-size: 24px;
+        margin-bottom: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .addfollow-sure-delete-item-text {
+        /* outline: 1px solid red; */
+        font-size: 16px;
+        padding-top: 50px;
+    }
+
+
+    .checkout button {
+        margin-top: 50px;
+    }
+
+
+
+}
+

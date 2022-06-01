@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配件購物車_付費頁</title>
+    
+     <!-- 連結主要的css檔 -->
+     <link rel="stylesheet" href="./css/shopping_cart.css">
+     <link rel="stylesheet" href="./css/0.navbar_footer.css">
+ 
+     <!-- Bootstrap CSS -->
+ 
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ 
+     <!-- Google font -->
+     
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+TC:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+ 
+     <!-- Fontawesome -->
+     <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+</head>
+
+<style>
+
+
+/* token held */
+
+.tokenholding{
+  background-color:hsla(41, 53%, 64%, 0.5);
+  width: 1140px;
+  height:50px;
+  display:flex;
+  justify-content:end;
+  margin-right:65px;
+  margin-top:35px;
+}
+
+.tokenholding div{
+  font-family: 'Noto Sans TC', sans-serif;
+  /* border:red 1px solid; */
+  display:flex;
+  align-items:center;
+  font-size:24px;
+  color: white;
+  padding: 5px 20px;
+}
+
+.tokenholding p{
+  margin:0 0 0 5px;
+}
+
+#cart-total{
+  display: flex;
+  align-items: center;
+}
+
+.far_right_space{
+  width:12px;
+}
+
+
+@media screen and (min-width: 376px){
+    .container_mobile{
+      display:none;
+    }
+  }
+@media screen and (max-width: 375px){
+
+   /* checkout button */
+
+   .checkout{
+      width: 327px;
+      margin-right: 0;
+      display: flex;
+      justify-content: space-between;  
+    }
+    .checkout button {
+      font-family: 'Noto Sans TC', sans-serif;
+      height: auto;
+      border: 0;
+      margin-top: 20px;
+      margin-left: 10px;
+      padding: 13px 0;
+      background-color: #D3B572;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 6px;
+      width: 100px;
+    }
+
+    .checkout button:hover {
+    background-color:#667080;
+    } 
+
+    .recommendation-title{
+      margin-top:20px;
+    }
+    .main-title{
+      font-size: 16px;
+      color:white;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    
+    .card_wrap{
+      width: 90%;
+      margin-top:20px;
+      padding-left: 0px;
+      height:213px;
+      display: flex;
+      justify-content: space-between;
+      /* border: red 1px solid; */
+
+    }
+    .card{
+      height:213px;
+      width:100px;
+      /* border: red 1px solid; */
+    }
+    
+    .arrow{
+      height:213px;
+      font-size:16px;
+      color:#D3B572;
+      display: flex;
+      align-items: center;
+    }
+    .checkout_buy{
+      /* border:red 1px solid; */
+      width: 327px;
+      margin-left:20px;
+      margin-bottom:20px;
+      margin-right: 0;
+      display: flex;
+      justify-content:space-between;
+    }
+    .checkout_buy button {
+      flex-grow:1;
+      font-family: 'Noto Sans TC', sans-serif;
+      height: auto;
+      border: 0;
+      margin-top: 20px;
+      padding: 13px 0;
+      background-color: #D3B572;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 6px;
+      /* width: 100px; */
+    }
+
+    .checkout button:hover {
+    background-color:#667080;
+    } 
+
+    .checkout_buy > .button_right {
+      margin-left:20px;
+    }
+
+  
+    .tokenholding{
+    background-color:hsla(41, 53%, 64%, 0.5);
+    width: 330px;
+    height:50px;
+    display:flex;
+    justify-content:end;
+    /* margin-right:10px; */
+    margin-top:20px;
+    margin-left:20px;
+    }
+
+    .tokenholding div{
+      font-family: 'Noto Sans TC', sans-serif;
+      /* border:red 1px solid; */
+      font-size:14px;
+      color: white;
+      padding: 5px 5px;
+    }
+
+    .far_right_space{
+      width:0px;
+    }
+
+    .tokenholding i{
+      color:#D3B572;
+      margin-right:5px
+    }
+}
+</style>
+
+<body>
+
+      <!-- Navbar -->
+    <!-- Navbar -->
+    <nav>
+      <div class="desktop-menu-list">
+          <div class="logo">
+              <a href="#" class="logo-link">
+                  <img src="./imgs/Navbar/logo_Luxiem.png" alt="">
+              </a>
+          </div>
+
+          <div class="mobile-btn">
+              <span class="mobilebtn-1"></span>
+              <span class="mobilebtn-2"></span>
+              <span class="mobilebtn-3"></span>
+          </div>
+
+          <div class="nav-right">
+              <ul class="list-unstyled d-flex align-items-center">
+                  <li>
+                      <a href="#">首頁</a>
+                  </li>
+                  <li class="nav__listitem">
+                      <a href="#">人物介紹</a>
+                      <ul class="nav__listitemdrop">
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">心理測驗</a>
+                          </li>
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">人物介紹</a>
+                          </li>
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">粉絲創作</a>
+                          </li>
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">出道歷程</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="nav__listitem">
+                      <a href="#">迷因配件</a>
+                      <ul class="nav__listitemdrop">
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">配件購物</a>
+                          </li>
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">代幣商店</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="nav__listitem">
+                      <a href="#">直播首頁</a>
+                      <ul class="nav__listitemdrop">
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">直播間</a>
+                          </li>
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">烤肉區</a>
+                          </li>
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">抖內區</a>
+                          </li>
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">時差換算</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="nav__listitem">
+                      <a href="#">會員中心</a>
+                      <ul class="nav__listitemdrop">
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">資料修改</a>
+                          </li>
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">訂單查詢</a>
+                          </li>
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">喜好收藏</a>
+                          </li>
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">持有配件</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="nav__listitem">
+                      <a href="#">討論區</a>
+                      <ul class="nav__listitemdrop">
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">文章列表</a>
+                          </li>
+                          <li>
+                              <a class="mobile-menu-subtitle" href="#">發表文章</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="desktop-user">
+              <div class="desktop-user-nav">
+                  <div class="user-info">
+                      <div class="user-imgwrap">
+                          <img src="./imgs/Navbar/user_img.png" alt="">
+                      </div>
+                      <div class="user-name">Allen</div>
+                      <div class="user-login">登出</div>
+                      <div class="log-icon">
+                          <i class="fa-solid fa-right-to-bracket"></i>
+                      </div>
+                  </div>
+
+                  <div class="user-cart">
+                      <div class="user-login">購物車</div>
+                      <div class="log-icon">
+                          <i class="fa-solid fa-cart-plus"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+      </div>
+
+
+
+      <!-- <div class="nav-links d-flex align-items-center mr-auto ml-4 border-left pl-4">
+          <ul class="list-unstyled d-flex align-items-center mb-0" >
+              <li>
+                  <a href="#" class="text-dark">探索</a>
+              </li>
+              <li class="ml-3" >
+                  <a href="#" class="text-dark"></a>提案</a>
+              </li>
+          </ul>
+      </div> -->
+
+
+
+
+
+
+    </nav>
+
+    <!-- 漢堡夾清單mobile_menu_list -->
+    <div class="mobile-menu">
+      <div class="user-info">
+          <div class="user-imgwrap">
+              <img src="./imgs/Navbar/user_img.png" alt="">
+          </div>
+          <div class="user-name">Allen</div>
+          <div class="user-login">登出</div>
+      </div>
+
+      <div class="mobile-menu-list">
+          <ul>
+              <li class="mobile-menu-title-all">
+                  <a class="mobile-menu-maintitle" href="#">首頁</a>
+              </li>
+              <li class="mobile-menu-title-all">
+                  <a class="mobile-menu-maintitle" href="#">人物介紹</a>
+                  <ul>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">心理測驗</a>
+                      </li>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">人物介紹</a>
+                      </li>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">粉絲創作</a>
+                      </li>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">出道歷程</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="mobile-menu-title-all">
+                  <a class="mobile-menu-maintitle" href="#">迷因配件</a>
+                  <ul>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">配件購物</a>
+                      </li>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">代幣商店</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="mobile-menu-title-all">
+                  <a class="mobile-menu-maintitle" href="#">直播首頁</a>
+                  <ul>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">直播間</a>
+                      </li>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">烤肉區</a>
+                      </li>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">抖內區</a>
+                      </li>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">時差換算</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="mobile-menu-title-all">
+                  <a class="mobile-menu-maintitle" href="#">會員中心</a>
+                  <ul>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">資料修改</a>
+                      </li>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">訂單查詢</a>
+                      </li>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">喜好收藏</a>
+                      </li>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">持有配件</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="mobile-menu-title-all">
+                  <a class="mobile-menu-maintitle" href="#">討論區</a>
+                  <ul>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">文章列表</a>
+                      </li>
+                      <li>
+                          <a class="mobile-menu-subtitle" href="#">發表文章</a>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+
+      <div class="mobile-menu-footer">
+          Copyright © 2022 Design by Team3rd. All Rights Reserved. <br>
+          此網站僅用於資策會專題發表
+      </div>
+    </div>
+
+
+    <!-- shopping cart PC -->
+    <div class="container_pc">
+      <div class="shopping_cart_title">
+        <div class="main_title">Shopping Cart</div>
+        <div class="sub_title">購物車</div>
+      </div>
+    </div>
+     <!-- shopping cart mobile -->
+    <div class="container_mobile">
+      <div class="shopping_cart_title">
+        <div class="main_title" style="font-size:24px">Shopping Cart</div>
+        <div class="sub_title" style="font-size:14px">購物車</div>
+      </div>
+    </div>
+    <!-- your coins PC-->
+    <div class="container_pc">
+      <div class="yourcoins">
+        <div class="main_title" style="font-size:20px">Your coins</div>
+        <div class="sub_title" style="font-size:16px; text-align: baseline;">  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5 13.3334V6.66669C17.4997 6.37442 17.4225 6.08736 17.2763 5.83432C17.13 5.58128 16.9198 5.37116 16.6667 5.22502L10.8333 1.89169C10.58 1.74541 10.2926 1.6684 10 1.6684C9.70744 1.6684 9.42003 1.74541 9.16667 1.89169L3.33333 5.22502C3.08022 5.37116 2.86998 5.58128 2.72372 5.83432C2.57745 6.08736 2.5003 6.37442 2.5 6.66669V13.3334C2.5003 13.6256 2.57745 13.9127 2.72372 14.1657C2.86998 14.4188 3.08022 14.6289 3.33333 14.775L9.16667 18.1084C9.42003 18.2546 9.70744 18.3316 10 18.3316C10.2926 18.3316 10.58 18.2546 10.8333 18.1084L16.6667 14.775C16.9198 14.6289 17.13 14.4188 17.2763 14.1657C17.4225 13.9127 17.4997 13.6256 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+          <div class="yourcoins_price"> 200</div>
+          </div>
+        <div class="sub_title" style="font-size:16px"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 9H9V15H15V9Z" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="yourcoins_price"> 200</div>
+          </div>
+    </div>
+  </div>
+
+     <!-- your coins mobile-->
+    <div class="container_mobile">
+      <div class="yourcoins">
+        <div class="main_title" style="font-size:16px">Your coins</div>
+        <div class="sub_title" style="font-size:16px; text-align: baseline;">  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5 13.3334V6.66669C17.4997 6.37442 17.4225 6.08736 17.2763 5.83432C17.13 5.58128 16.9198 5.37116 16.6667 5.22502L10.8333 1.89169C10.58 1.74541 10.2926 1.6684 10 1.6684C9.70744 1.6684 9.42003 1.74541 9.16667 1.89169L3.33333 5.22502C3.08022 5.37116 2.86998 5.58128 2.72372 5.83432C2.57745 6.08736 2.5003 6.37442 2.5 6.66669V13.3334C2.5003 13.6256 2.57745 13.9127 2.72372 14.1657C2.86998 14.4188 3.08022 14.6289 3.33333 14.775L9.16667 18.1084C9.42003 18.2546 9.70744 18.3316 10 18.3316C10.2926 18.3316 10.58 18.2546 10.8333 18.1084L16.6667 14.775C16.9198 14.6289 17.13 14.4188 17.2763 14.1657C17.4225 13.9127 17.4997 13.6256 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+          <div class="yourcoins_price"> 200</div>
+          </div>
+        <div class="sub_title" style="font-size:16px"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 9H9V15H15V9Z" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="yourcoins_price"> 200</div>
+          </div>
+      </div>
+    </div>
+
+    <!-- progress section PC-->
+    <div class="container_pc">
+      <ul class="shopping_cart_progress">
+        <li class="active">確認購買清單</li>
+        <li class="">代幣結帳</li>
+        <li>購物完成</li>
+      </ul>
+    </div>
+    <!-- progress section mobile -->
+    <div class="container_mobile">
+      <ul class="shopping_cart_progress" style="font-size:12px">
+        <li class="active" >確認購買清單</li>
+        <li class="">代幣結帳</li>
+        <li>購物完成</li>
+      </ul>  
+    </div>
+    
+
+    <!-- item list PC -->
+      <div class="container_pc">
+          <div class="item_header item_header_pc">
+              <div class="item_detail">商品資訊</div>
+              <div class="count">數量</div> 
+              <div class="price">價格</div>
+              <div class="totalprice">小計</div>
+              <div class="buynexttime">下次買</div>
+              <div class="delete">刪除</div>
+          </div>
+          <div class="underline"></div>
+
+          <div class="item_header item_body">
+              <div class="item_detail">
+                  <img src="imgs/Shoppingcard/shu mic.png" alt="">
+                  <div class="name">Shu 麥克風</div>
+              </div>
+              <div class="count">
+                1
+              </div> 
+              <div class="price"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p style=" color: #D3B572;">100</p>
+                
+                </div>
+
+              <div class="totalprice"> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p style=" color: #D3B572;">100</p>
+              </div>
+
+              <div class="buynexttime">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.3667 3.84166C16.9411 3.41583 16.4357 3.07803 15.8795 2.84757C15.3233 2.6171 14.7271 2.49847 14.1251 2.49847C13.523 2.49847 12.9268 2.6171 12.3706 2.84757C11.8144 3.07803 11.309 3.41583 10.8834 3.84166L10.0001 4.725L9.11673 3.84166C8.25698 2.98192 7.09092 2.49892 5.87506 2.49892C4.6592 2.49892 3.49314 2.98192 2.63339 3.84166C1.77365 4.70141 1.29065 5.86747 1.29065 7.08333C1.29065 8.29919 1.77365 9.46525 2.63339 10.325L3.51672 11.2083L10.0001 17.6917L16.4834 11.2083L17.3667 10.325C17.7926 9.89937 18.1304 9.39401 18.3608 8.83779C18.5913 8.28158 18.7099 7.6854 18.7099 7.08333C18.7099 6.48126 18.5913 5.88508 18.3608 5.32887C18.1304 4.77265 17.7926 4.26729 17.3667 3.84166V3.84166Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+              </div>
+              <div class="delete">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.99996 18.3334C14.6023 18.3334 18.3333 14.6024 18.3333 10C18.3333 5.39765 14.6023 1.66669 9.99996 1.66669C5.39759 1.66669 1.66663 5.39765 1.66663 10C1.66663 14.6024 5.39759 18.3334 9.99996 18.3334Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12.5 7.5L7.5 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7.5 7.5L12.5 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+              </div>
+          </div>
+
+          <div class="item_header item_body">
+            <div class="item_detail">
+              <img src="imgs/Shoppingcard/shu mic.png" alt="">
+              <div class="name">Shu 麥克風</div>
+          </div>
+            <div class="count">
+              1
+            </div> 
+            <div class="price"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p style=" color: #D3B572;">100</p>
+              
+              </div>
+
+            <div class="totalprice"> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p style=" color: #D3B572;">100</p>
+            </div>
+
+            <div class="buynexttime">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.3667 3.84166C16.9411 3.41583 16.4357 3.07803 15.8795 2.84757C15.3233 2.6171 14.7271 2.49847 14.1251 2.49847C13.523 2.49847 12.9268 2.6171 12.3706 2.84757C11.8144 3.07803 11.309 3.41583 10.8834 3.84166L10.0001 4.725L9.11673 3.84166C8.25698 2.98192 7.09092 2.49892 5.87506 2.49892C4.6592 2.49892 3.49314 2.98192 2.63339 3.84166C1.77365 4.70141 1.29065 5.86747 1.29065 7.08333C1.29065 8.29919 1.77365 9.46525 2.63339 10.325L3.51672 11.2083L10.0001 17.6917L16.4834 11.2083L17.3667 10.325C17.7926 9.89937 18.1304 9.39401 18.3608 8.83779C18.5913 8.28158 18.7099 7.6854 18.7099 7.08333C18.7099 6.48126 18.5913 5.88508 18.3608 5.32887C18.1304 4.77265 17.7926 4.26729 17.3667 3.84166V3.84166Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+            </div>
+            <div class="delete">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.99996 18.3334C14.6023 18.3334 18.3333 14.6024 18.3333 10C18.3333 5.39765 14.6023 1.66669 9.99996 1.66669C5.39759 1.66669 1.66663 5.39765 1.66663 10C1.66663 14.6024 5.39759 18.3334 9.99996 18.3334Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.5 7.5L7.5 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.5 7.5L12.5 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+            </div>
+        </div>
+
+        <div class="item_header item_body">
+           <div class="item_detail">
+                  <img src="imgs/Shoppingcard/shu mic.png" alt="">
+                  <div class="name">Shu 麥克風</div>
+              </div>
+          <div class="count">
+            1
+          </div> 
+          <div class="price"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p style=" color: #D3B572;">100</p>
+            
+            </div>
+
+          <div class="totalprice"> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p style=" color: #D3B572;">100</p>
+          </div>
+
+          <div class="buynexttime">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.3667 3.84166C16.9411 3.41583 16.4357 3.07803 15.8795 2.84757C15.3233 2.6171 14.7271 2.49847 14.1251 2.49847C13.523 2.49847 12.9268 2.6171 12.3706 2.84757C11.8144 3.07803 11.309 3.41583 10.8834 3.84166L10.0001 4.725L9.11673 3.84166C8.25698 2.98192 7.09092 2.49892 5.87506 2.49892C4.6592 2.49892 3.49314 2.98192 2.63339 3.84166C1.77365 4.70141 1.29065 5.86747 1.29065 7.08333C1.29065 8.29919 1.77365 9.46525 2.63339 10.325L3.51672 11.2083L10.0001 17.6917L16.4834 11.2083L17.3667 10.325C17.7926 9.89937 18.1304 9.39401 18.3608 8.83779C18.5913 8.28158 18.7099 7.6854 18.7099 7.08333C18.7099 6.48126 18.5913 5.88508 18.3608 5.32887C18.1304 4.77265 17.7926 4.26729 17.3667 3.84166V3.84166Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              
+          </div>
+          <div class="delete">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.99996 18.3334C14.6023 18.3334 18.3333 14.6024 18.3333 10C18.3333 5.39765 14.6023 1.66669 9.99996 1.66669C5.39759 1.66669 1.66663 5.39765 1.66663 10C1.66663 14.6024 5.39759 18.3334 9.99996 18.3334Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12.5 7.5L7.5 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7.5 7.5L12.5 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              
+          </div>
+      </div>
+      <div class="topline"></div>
+      </div>
+      </div>
+     
+      
+
+        <!-- item list mobile -->
+        <div class="container_mobile">
+          <div class="container_mobile_product">
+            <div class="underline"></div>
+
+          <div class="item_body">
+
+            <div class="item_img_wrap">
+              <img src="imgs/Shoppingcard/shu mic.png" alt="">
+            </div>
+            <div class="item_detail">
+
+              <div class="item_upper">
+                <div class="name">Shu 麥克風</div>
+                <div class="buynexttime">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.3667 3.84166C16.9411 3.41583 16.4357 3.07803 15.8795 2.84757C15.3233 2.6171 14.7271 2.49847 14.1251 2.49847C13.523 2.49847 12.9268 2.6171 12.3706 2.84757C11.8144 3.07803 11.309 3.41583 10.8834 3.84166L10.0001 4.725L9.11673 3.84166C8.25698 2.98192 7.09092 2.49892 5.87506 2.49892C4.6592 2.49892 3.49314 2.98192 2.63339 3.84166C1.77365 4.70141 1.29065 5.86747 1.29065 7.08333C1.29065 8.29919 1.77365 9.46525 2.63339 10.325L3.51672 11.2083L10.0001 17.6917L16.4834 11.2083L17.3667 10.325C17.7926 9.89937 18.1304 9.39401 18.3608 8.83779C18.5913 8.28158 18.7099 7.6854 18.7099 7.08333C18.7099 6.48126 18.5913 5.88508 18.3608 5.32887C18.1304 4.77265 17.7926 4.26729 17.3667 3.84166V3.84166Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+              </div>
+
+              <div class="item_under">
+                <div class="price"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <p>100</p>
+                  
+                  </div>
+                <div class="count"> x1 </div>
+                  <div class="delete">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.99996 18.3334C14.6023 18.3334 18.3333 14.6024 18.3333 10C18.3333 5.39765 14.6023 1.66669 9.99996 1.66669C5.39759 1.66669 1.66663 5.39765 1.66663 10C1.66663 14.6024 5.39759 18.3334 9.99996 18.3334Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.5 7.5L7.5 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7.5 7.5L12.5 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="item_body">
+
+            <div class="item_img_wrap">
+              <img src="imgs/Shoppingcard/shu mic.png" alt="">
+            </div>
+            <div class="item_detail">
+
+              <div class="item_upper">
+                <div class="name">Shu 麥克風</div>
+                <div class="buynexttime">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.3667 3.84166C16.9411 3.41583 16.4357 3.07803 15.8795 2.84757C15.3233 2.6171 14.7271 2.49847 14.1251 2.49847C13.523 2.49847 12.9268 2.6171 12.3706 2.84757C11.8144 3.07803 11.309 3.41583 10.8834 3.84166L10.0001 4.725L9.11673 3.84166C8.25698 2.98192 7.09092 2.49892 5.87506 2.49892C4.6592 2.49892 3.49314 2.98192 2.63339 3.84166C1.77365 4.70141 1.29065 5.86747 1.29065 7.08333C1.29065 8.29919 1.77365 9.46525 2.63339 10.325L3.51672 11.2083L10.0001 17.6917L16.4834 11.2083L17.3667 10.325C17.7926 9.89937 18.1304 9.39401 18.3608 8.83779C18.5913 8.28158 18.7099 7.6854 18.7099 7.08333C18.7099 6.48126 18.5913 5.88508 18.3608 5.32887C18.1304 4.77265 17.7926 4.26729 17.3667 3.84166V3.84166Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+              </div>
+
+              <div class="item_under">
+                <div class="price"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <p>100</p>
+                  
+                  </div>
+                <div class="count"> x1 </div>
+                  <div class="delete">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.99996 18.3334C14.6023 18.3334 18.3333 14.6024 18.3333 10C18.3333 5.39765 14.6023 1.66669 9.99996 1.66669C5.39759 1.66669 1.66663 5.39765 1.66663 10C1.66663 14.6024 5.39759 18.3334 9.99996 18.3334Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.5 7.5L7.5 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7.5 7.5L12.5 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="underline"></div>
+          </div>
+        </div>
+
+    <!-- Totals section PC -->
+    <div class="container_pc">
+      <div class="totals">
+        <div class="totals-item">
+          <label>商品總金額</label>
+          <div class="totals-value" id="cart-subtotal">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5 13.3334V6.66669C17.4997 6.37442 17.4225 6.08736 17.2763 5.83432C17.13 5.58128 16.9198 5.37116 16.6667 5.22502L10.8333 1.89169C10.58 1.74541 10.2926 1.6684 10 1.6684C9.70744 1.6684 9.42003 1.74541 9.16667 1.89169L3.33333 5.22502C3.08022 5.37116 2.86998 5.58128 2.72372 5.83432C2.57745 6.08736 2.5003 6.37442 2.5 6.66669V13.3334C2.5003 13.6256 2.57745 13.9127 2.72372 14.1657C2.86998 14.4188 3.08022 14.6289 3.33333 14.775L9.16667 18.1084C9.42003 18.2546 9.70744 18.3316 10 18.3316C10.2926 18.3316 10.58 18.2546 10.8333 18.1084L16.6667 14.775C16.9198 14.6289 17.13 14.4188 17.2763 14.1657C17.4225 13.9127 17.4997 13.6256 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p>200</p>
+              </div>
+        </div>
+        <div class="totals-item">
+          <label>加購總金額</label>
+          <div class="totals-value" id="cart-shipping">0</div>
+        </div>
+        <div class="totals-item totals-item-total">
+          <label>應付總金額</label>
+          <div class="totals-value" id="cart-total">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5 13.3334V6.66669C17.4997 6.37442 17.4225 6.08736 17.2763 5.83432C17.13 5.58128 16.9198 5.37116 16.6667 5.22502L10.8333 1.89169C10.58 1.74541 10.2926 1.6684 10 1.6684C9.70744 1.6684 9.42003 1.74541 9.16667 1.89169L3.33333 5.22502C3.08022 5.37116 2.86998 5.58128 2.72372 5.83432C2.57745 6.08736 2.5003 6.37442 2.5 6.66669V13.3334C2.5003 13.6256 2.57745 13.9127 2.72372 14.1657C2.86998 14.4188 3.08022 14.6289 3.33333 14.775L9.16667 18.1084C9.42003 18.2546 9.70744 18.3316 10 18.3316C10.2926 18.3316 10.58 18.2546 10.8333 18.1084L16.6667 14.775C16.9198 14.6289 17.13 14.4188 17.2763 14.1657C17.4225 13.9127 17.4997 13.6256 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p>200</p>
+        </div>
+            
+        </div>
+      </div>  
+    </div>
+
+    <!-- Totals section mobile -->
+    <div class="container_mobile">
+      <div class="totals">
+        <div class="totals-item">
+          <label>商品總金額</label>
+          <div class="totals-value" id="cart-subtotal">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5 13.3334V6.66669C17.4997 6.37442 17.4225 6.08736 17.2763 5.83432C17.13 5.58128 16.9198 5.37116 16.6667 5.22502L10.8333 1.89169C10.58 1.74541 10.2926 1.6684 10 1.6684C9.70744 1.6684 9.42003 1.74541 9.16667 1.89169L3.33333 5.22502C3.08022 5.37116 2.86998 5.58128 2.72372 5.83432C2.57745 6.08736 2.5003 6.37442 2.5 6.66669V13.3334C2.5003 13.6256 2.57745 13.9127 2.72372 14.1657C2.86998 14.4188 3.08022 14.6289 3.33333 14.775L9.16667 18.1084C9.42003 18.2546 9.70744 18.3316 10 18.3316C10.2926 18.3316 10.58 18.2546 10.8333 18.1084L16.6667 14.775C16.9198 14.6289 17.13 14.4188 17.2763 14.1657C17.4225 13.9127 17.4997 13.6256 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p>200</p>
+          </div>
+        </div>  
+        <div class="totals-item">
+          <label>加購總金額</label>
+          <div class="totals-value" id="cart-shipping">0</div>
+        </div>
+        <div class="totals-item totals-item-total">
+          <label>應付總金額</label>
+          <div class="totals-value" id="cart-total">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5 13.3334V6.66669C17.4997 6.37442 17.4225 6.08736 17.2763 5.83432C17.13 5.58128 16.9198 5.37116 16.6667 5.22502L10.8333 1.89169C10.58 1.74541 10.2926 1.6684 10 1.6684C9.70744 1.6684 9.42003 1.74541 9.16667 1.89169L3.33333 5.22502C3.08022 5.37116 2.86998 5.58128 2.72372 5.83432C2.57745 6.08736 2.5003 6.37442 2.5 6.66669V13.3334C2.5003 13.6256 2.57745 13.9127 2.72372 14.1657C2.86998 14.4188 3.08022 14.6289 3.33333 14.775L9.16667 18.1084C9.42003 18.2546 9.70744 18.3316 10 18.3316C10.2926 18.3316 10.58 18.2546 10.8333 18.1084L16.6667 14.775C16.9198 14.6289 17.13 14.4188 17.2763 14.1657C17.4225 13.9127 17.4997 13.6256 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p>200</p>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+    <!-- token held PC -->
+    <div class="container_pc">
+      <div class="tokenholding">
+        <div>
+          持有代幣
+        </div>
+        <div class="" id="cart-total">
+          <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="icon_left_price" style=" color: #D3B572;">100</p>
+        </div>
+        
+          <div> － </div>
+          <div>
+            應付總金額
+          </div>
+          <div> ＝ </div>
+          <div class="" id="cart-total">
+            <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="icon_left_price" style=" color: #D3B572;">100</p>
+            </div>
+
+            <div class="far_right_space"></div>
+          </div>
+        </div>       
+      </div>
+
+          <!-- token held mobile-->
+    <div class="container_mobile">
+      <div class="tokenholding">
+        <div>
+          持有代幣
+        </div>
+        <div class="" id="cart-total">
+          <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="icon_left_price" style=" color: #D3B572;">100</p>  
+        </div>
+        
+          <div> － </div>
+          <div>
+            應付總金額
+          </div>
+          <div> ＝ </div>
+          <div class="" id="cart-total">
+            <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" fill="#D3B572" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="icon_left_price" style=" color: #D3B572;">100</p>
+            </div>     
+      </div>
+    </div>
+
+
+
+    <!-- checkout button  -->
+    <div class="container_pc"> 
+      <div class="checkout">
+        <button class="">確認結帳(3)</button>
+        <button class="">取消結帳</button>
+      
+      </div>
+    </div>
+
+    <!-- checkout mobile  -->
+    <div class="container_mobile"> 
+      <div class="checkout_buy">
+        <button class="">取消結帳</button>
+        <button class="button_right">確認結帳(3)</button>
+      </div>
+    </div>
+
+<!-- footer -->
+<footer>
+<div class="desktop-footer">
+  <div class="desktop-footer-team3rd">
+      Copyright © 2022 Design by Team3rd. All Rights Reserved. <br>
+      此網站僅用於資策會專題發表
+  </div>
+</div>
+</footer>
+
+
+
+<script src="./js/jquery-3.6.0.js"></script>
+<script src="./bootstrap-4.2.1-dist/js/bootstrap.bundle.js"></script>
+
+<!-- Navbar/Footer js -->
+<script src="./js/0.navbar_footer.js"></script>
+
+<!-- 下面是 導覽列套用scroll滑動效果 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+<script src="./js/script.js"></script>
+
+
+
+
+
+
+</body>
+</html>

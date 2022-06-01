@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇代幣頁Lightbox 光箱測試版</title>
+
+    <!-- 連結主要的css檔 -->
+    <link rel="stylesheet" href="./css/Vtuber_main.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+
+    <style>
+        .itemshop-itemdetails {
+            /* width: 350vh; */
+            width: 100vw;
+            height: 150vh;
+            position: fixed;
+            background-color: rgb(0, 0, 0, 0.3);
+            z-index: 3;
+        }
+
+        .itemshop-itemdetails-wrap {
+            width: 95%;
+            height: 300px;
+            background-color: #000;
+            border-radius: 5px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        .itemshop-itemdetails-name {
+            /* outline: 1px solid red; */
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 35px;
+        }
+
+        /* 左邊配件圖和價錢 */
+        .itemshop-itemdetails-item-unit {
+            /* outline: 1px solid red; */
+            margin-top: 25px;
+            padding-left: 33px;
+        }
+
+        .itemshop-itemdetailsm-item-imgwrap {
+            width: 133px;
+            height: 133px;
+            border: 2px solid #667080;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .itemshop-itemdetailsm-item-imgwrap img {
+            width: 100%;
+            object-fit: cover;
+            opacity: 1;
+            transition: .5s;
+        }
+
+        .itemshop-itemdetailsm-item-imgwrap:hover img {
+            opacity: .5;
+        }
+
+        /* 喜愛追蹤 飄入愛心 */
+        .itemshop-itemdetails-follow-heart svg {
+            width: 20px;
+            height: 20px;
+            /* outline: 1px solid red; */
+            position: absolute;
+            right: 6px;
+            bottom: -20px;
+            transition: .5s;
+        }
+
+        .itemshop-itemdetailsm-item-imgwrap:hover .itemshop-itemdetails-follow-heart svg {
+            bottom: 5px;
+        }
+
+        .itemshop-itemdetails-item-price {
+            /* outline: 1px solid red; */
+            padding-top: 18px;
+        }
+
+        .itemshop-itemdetails-item-price-gold svg,
+        .itemshop-itemdetails-item-price-free svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .itemshop-itemdetails-item-price-gold-number,
+        .itemshop-itemdetails-item-price-free-number {
+            font-size: 16px;
+            font-weight: 500;
+            color: #D3B572;
+            padding-left: 6px;
+        }
+
+        .itemshop-itemdetails-item-price-gold {
+            padding-left: 18px;
+        }
+
+        .itemshop-itemdetails-item-price-free {
+            padding-left: 20px;
+        }
+
+        /* 右邊 選擇代幣按鈕 */
+        .itemshop-choose-coin-btn-group {
+            /* outline: 1px solid red; */
+            position: absolute;
+            top: 106px;
+            right: 33px;
+        }
+
+        .itemshop-choose-coin-btn-group a {
+            text-decoration: none;
+        }
+
+        .itemshop-choose-coin-btn-gold,
+        .itemshop-choose-coin-btn-free {
+            width: 120px;
+            background-color: #fff;
+            border-radius: 3px;
+            color: #D3B572;
+            padding: 8px 15px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .itemshop-choose-coin-btn-gold svg,
+        .itemshop-choose-coin-btn-free svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .itemshop-choose-coin-btn-gold svg {
+            stroke: #D3B572;
+            fill: #D3B572;
+        }
+
+        .itemshop-choose-coin-btn-free svg {
+            stroke: #D3B572;
+        }
+
+        .itemshop-choose-coin-btn-gold span,
+        .itemshop-choose-coin-btn-free span {
+            padding-left: 12px;
+        }
+
+        .itemshop-choose-coin-btn-free {
+            margin-top: 20px;
+        }
+
+        .itemshop-choose-coin-btn-gold:hover,
+        .itemshop-choose-coin-btn-free:hover {
+            background-color: #D3B572;
+            color: #fff;
+        }
+
+        .itemshop-choose-coin-btn-gold:hover svg {
+            stroke: #fff;
+            fill: #fff;
+        }
+
+        .itemshop-choose-coin-btn-free:hover svg {
+            stroke: #fff;
+        }
+
+
+        /* 關閉叉叉按鈕 */
+        .itemshop-itemdetails-close {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .itemshop-itemdetails-close svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+
+
+
+        /* ---RWD桌機版：1920px--- */
+        @media screen and (min-width: 1600px) {
+            .itemshop-itemdetails-wrap {
+                width: 25%;
+                height: 400px;
+            }
+
+            .itemshop-itemdetails-name {
+                font-size: 24px;
+                margin-top: 40px;
+            }
+
+            /* 左邊配件圖和價錢 */
+            .itemshop-itemdetails-item-unit {
+                /* outline: 1px solid red; */
+                margin-top: 25px;
+                padding-left: 40px;
+            }
+
+            .itemshop-itemdetailsm-item-imgwrap {
+                width: 200px;
+                height: 200px;
+            }
+
+            /* 喜愛追蹤 飄入愛心 */
+            .itemshop-itemdetails-follow-heart svg {
+                width: 32px;
+                height: 32px;
+                right: 10px;
+                bottom: -35px;
+            }
+
+            .itemshop-itemdetailsm-item-imgwrap:hover .itemshop-itemdetails-follow-heart svg {
+                bottom: 8px;
+            }
+
+            .itemshop-itemdetails-item-price-gold svg,
+            .itemshop-itemdetails-item-price-free svg {
+                width: 25px;
+                height: 25px;
+            }
+
+            .itemshop-itemdetails-item-price-gold-number,
+            .itemshop-itemdetails-item-price-free-number {
+                font-size: 20px;
+                padding-left: 10px;
+            }
+
+            .itemshop-itemdetails-item-price-gold {
+                padding-left: 27px;
+            }
+
+            .itemshop-itemdetails-item-price-free {
+                padding-left: 30px;
+            }
+
+            /* 右邊 選擇代幣按鈕 */
+            .itemshop-choose-coin-btn-group {
+                position: absolute;
+                top: 140px;
+                right: 40px;
+            }
+
+            .itemshop-choose-coin-btn-gold,
+            .itemshop-choose-coin-btn-free {
+                width: 160px;
+                font-size: 20px;
+                padding: 11px 18px;
+            }
+
+            .itemshop-choose-coin-btn-gold svg,
+            .itemshop-choose-coin-btn-free svg {
+                width: 25px;
+                height: 25px;
+            }
+
+            .itemshop-choose-coin-btn-gold span,
+            .itemshop-choose-coin-btn-free span {
+                padding-left: 15px;
+            }
+
+            .itemshop-choose-coin-btn-free {
+                margin-top: 25px;
+            }
+
+
+
+
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="itemshop-itemdetails">
+        <div class="itemshop-itemdetails-wrap">
+            <div class="itemshop-itemdetails-name">Shu KARAOKE 麥克風</div>
+
+            <div class="itemshop-itemdetails-main">
+                <!-- 左邊配件圖和價錢 -->
+                <div class="itemshop-itemdetails-item-unit">
+                    <div class="itemshop-itemdetailsm-item-imgwrap">
+                        <!-- 喜愛追蹤 飄入愛心 -->
+                        <div class="itemshop-itemdetails-follow-heart">
+                            <svg viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.0895 3.17123L11.8924 3.37949L11.6842 3.18238C9.21847 0.848789 5.32788 0.955871 2.99429 3.42156C0.660692 5.88724 0.767773 9.77783 3.23346 12.1114L11.6445 20.0718L12.3708 20.7592L13.0581 20.0329L21.0186 11.6219C23.3522 9.15624 23.2451 5.26565 20.7794 2.93206C18.3137 0.598463 14.4231 0.705543 12.0895 3.17123Z"
+                                    stroke="#D3B572" stroke-width="2" />
+                            </svg>
+                        </div>
+
+                        <img src="./imgs/Itemshop/itemshop_banner_ikehand1.png" alt="">
+                    </div>
+
+                    <div class="d-flex itemshop-itemdetails-item-price">
+                        <div class="d-flex itemshop-itemdetails-item-price-gold align-items-center">
+                            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.25 9.33344V4.66677C12.2498 4.46218 12.1958 4.26125 12.0934 4.08412C11.991 3.90699 11.8438 3.7599 11.6667 3.65761L7.58333 1.32427C7.40598 1.22188 7.20479 1.16797 7 1.16797C6.79521 1.16797 6.59402 1.22188 6.41667 1.32427L2.33333 3.65761C2.15615 3.7599 2.00899 3.90699 1.9066 4.08412C1.80422 4.26125 1.75021 4.46218 1.75 4.66677V9.33344C1.75021 9.53803 1.80422 9.73897 1.9066 9.91609C2.00899 10.0932 2.15615 10.2403 2.33333 10.3426L6.41667 12.6759C6.59402 12.7783 6.79521 12.8322 7 12.8322C7.20479 12.8322 7.40598 12.7783 7.58333 12.6759L11.6667 10.3426C11.8438 10.2403 11.991 10.0932 12.0934 9.91609C12.1958 9.73897 12.2498 9.53803 12.25 9.33344Z"
+                                    fill="#D3B572" stroke="#D3B572" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <div class="itemshop-itemdetails-item-price-gold-number">10</div>
+
+                        </div>
+                        <div class="d-flex itemshop-itemdetails-item-price-free align-items-center">
+                            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.99984 12.8334C10.2215 12.8334 12.8332 10.2217 12.8332 7.00008C12.8332 3.77842 10.2215 1.16675 6.99984 1.16675C3.77818 1.16675 1.1665 3.77842 1.1665 7.00008C1.1665 10.2217 3.77818 12.8334 6.99984 12.8334Z"
+                                    stroke="#D3B572" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M8.75 5.25H5.25V8.75H8.75V5.25Z" stroke="#D3B572" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <div class="itemshop-itemdetails-item-price-free-number">46</div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右邊 選擇代幣按鈕 -->
+                <div class="itemshop-choose-coin-btn-group">
+                    <a class="itemshop-choose-coin-btn-gold d-flex align-items-center justify-content-center" href="#">
+                        <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21.875 16.6667V8.33334C21.8746 7.968 21.7782 7.60919 21.5954 7.29289C21.4125 6.97659 21.1497 6.71393 20.8333 6.53126L13.5417 2.36459C13.225 2.18174 12.8657 2.08548 12.5 2.08548C12.1343 2.08548 11.775 2.18174 11.4583 2.36459L4.16667 6.53126C3.85027 6.71393 3.58748 6.97659 3.40465 7.29289C3.22182 7.60919 3.12537 7.968 3.125 8.33334V16.6667C3.12537 17.032 3.22182 17.3908 3.40465 17.7071C3.58748 18.0234 3.85027 18.2861 4.16667 18.4688L11.4583 22.6354C11.775 22.8183 12.1343 22.9145 12.5 22.9145C12.8657 22.9145 13.225 22.8183 13.5417 22.6354L20.8333 18.4688C21.1497 18.2861 21.4125 18.0234 21.5954 17.7071C21.7782 17.3908 21.8746 17.032 21.875 16.6667Z"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>金幣購買</span>
+                    </a>
+                    <a class="itemshop-choose-coin-btn-free d-flex align-items-center justify-content-center" href="#">
+                        <svg viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.6999 22.9167C18.4528 22.9167 23.1165 18.253 23.1165 12.5C23.1165 6.74704 18.4528 2.08334 12.6999 2.08334C6.9469 2.08334 2.2832 6.74704 2.2832 12.5C2.2832 18.253 6.9469 22.9167 12.6999 22.9167Z"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15.825 9.375H9.57495V15.625H15.825V9.375Z" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>銀幣購買</span>
+                    </a>
+
+                </div>
+            </div>
+
+
+
+            <!-- 關閉叉叉按鈕 -->
+            <div class="itemshop-itemdetails-close">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.5 8.5L8.5 25.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M8.5 8.5L25.5 25.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.2.1-dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        $('.itemshop-itemdetails-close').click(function () {
+            console.log('hi');
+            $('.itemshop-itemdetails').addClass('hide');
+        })
+    </script>
+
+</body>
+
+</html>

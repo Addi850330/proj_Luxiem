@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員註冊</title>
+    <link rel="stylesheet" href="./bootstrap-4.2.1-dist/css/bootstrap.min.css">
+<!-- bootstrap4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- font-awesome6.0.0 CDN-->
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+<!-- font-awesome6.0.0 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<!-- google fonts  -->
+<!-- 連結主要的nav.css檔 -->
+<link rel="stylesheet" href="./css/0.navbar_footer.css">
+    <link rel="stylesheet" href="./css/sign-up-page.css">
+    <link rel="stylesheet" href="./css/sign-up-page-rwd.css">
+</head>
+<body>
+    <section class="mc-bg">
+        <nav>
+            <div class="desktop-menu-list">
+                <div class="logo">
+                    <a href="#" class="logo-link">
+                        <img src="./imgs/Navbar/logo_Luxiem.png" alt="">
+                    </a>
+                </div>
+    
+                <div class="mobile-btn">
+                    <span class="mobilebtn-1"></span>
+                    <span class="mobilebtn-2"></span>
+                    <span class="mobilebtn-3"></span>
+                </div>
+    
+                <div class="nav-right">
+                    <ul class="list-unstyled d-flex align-items-center">
+                        <li>
+                            <a href="#">首頁</a>
+                        </li>
+                        <li class="nav__listitem">
+                            <a href="#">人物介紹</a>
+                            <ul class="nav__listitemdrop">
+                                <li>
+                                    <a class="mobile-menu-subti tle" href="#">心理測驗</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">人物介紹</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">粉絲創作</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">出道歷程</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__listitem">
+                            <a href="#">迷因配件</a>
+                            <ul class="nav__listitemdrop">
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">配件購物</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">代幣商店</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__listitem">
+                            <a href="#">直播首頁</a>
+                            <ul class="nav__listitemdrop">
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">直播間</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">烤肉區</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">抖內區</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">時差換算</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__listitem">
+                            <a href="#">會員中心</a>
+                            <ul class="nav__listitemdrop">
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">資料修改</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">訂單查詢</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">喜好收藏</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">持有配件</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__listitem">
+                            <a href="#">討論區</a>
+                            <ul class="nav__listitemdrop">
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">文章列表</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-menu-subtitle" href="#">發表文章</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="desktop-user">
+                    <div class="desktop-user-nav">
+                        <a class="user-info" href="#">
+                            <div class="user-imgwrap">
+                                <img src="./imgs/Navbar/user_img.png" alt="">
+                            </div>
+                            <div class="user-name">Allen</div>
+                            <div class="user-login">登出</div>
+                            <div class="log-icon">
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                            </div>
+                        </a>
+    
+                        <a class="user-cart" href="#">
+                            <div class="user-login">購物車</div>
+                            <div class="log-icon">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+    
+    
+            </div>
+            <!-- <div class="nav-links d-flex align-items-center mr-auto ml-4 border-left pl-4">
+                <ul class="list-unstyled d-flex align-items-center mb-0" >
+                    <li>
+                        <a href="#" class="text-dark">探索</a>
+                    </li>
+                    <li class="ml-3" >
+                        <a href="#" class="text-dark"></a>提案</a>
+                    </li>
+                </ul>
+            </div> -->
+        </nav>
+         <!-- 漢堡夾清單mobile_menu_list -->
+    <div class="mobile-menu">
+        <a class="user-info" href="#">
+            <div class="user-imgwrap">
+                <img src="./imgs/Navbar/user_img.png" alt="">
+            </div>
+            <div class="user-name">Allen</div>
+            <div class="user-login">登出</div>
+        </a>
+
+        <div class="mobile-menu-list">
+            <ul>
+                <li class="mobile-menu-title-all">
+                    <a class="mobile-menu-maintitle" href="#">首頁</a>
+                </li>
+                <li class="mobile-menu-title-all">
+                    <a class="mobile-menu-maintitle" href="#">人物介紹</a>
+                    <ul>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">心理測驗</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">人物介紹</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">粉絲創作</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">出道歷程</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-title-all">
+                    <a class="mobile-menu-maintitle" href="#">迷因配件</a>
+                    <ul>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">配件購物</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">代幣商店</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-title-all">
+                    <a class="mobile-menu-maintitle" href="#">直播首頁</a>
+                    <ul>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">直播間</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">烤肉區</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">抖內區</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">時差換算</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-title-all">
+                    <a class="mobile-menu-maintitle" href="#">會員中心</a>
+                    <ul>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">資料修改</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">訂單查詢</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">喜好收藏</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">持有配件</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-title-all">
+                    <a class="mobile-menu-maintitle" href="#">討論區</a>
+                    <ul>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">文章列表</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-subtitle" href="#">發表文章</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mobile-menu-footer">
+            Copyright © 2022 Design by Team3rd. All Rights Reserved. <br>
+            此網站僅用於資策會專題發表
+        </div>
+    </div>
+        <div class="container">
+            <form action="">
+                <svg class="mc-logo" width="50" height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.0003 44.8904C36.5063 44.8904 45.8337 35.7549 45.8337 24.4857C45.8337 13.2165 36.5063 4.08105 25.0003 4.08105C13.4944 4.08105 4.16699 13.2165 4.16699 24.4857C4.16699 35.7549 13.4944 44.8904 25.0003 44.8904Z" stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M30 12C31.1442 12.2843 32.1584 12.9299 32.8826 13.8352C33.6069 14.7405 34 15.854 34 17C34 18.146 33.6069 19.2595 32.8826 20.1648C32.1584 21.0701 31.1442 21.7157 30 22" stroke="#D3B572" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M39 35V32.615C38.9991 31.5581 38.6058 30.5314 37.8818 29.6961C37.1578 28.8608 36.1442 28.2642 35 28" stroke="#D3B572" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 22C23.7614 22 26 19.7614 26 17C26 14.2386 23.7614 12 21 12C18.2386 12 16 14.2386 16 17C16 19.7614 18.2386 22 21 22Z" stroke="#D3B572" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M31 35V32.3333C31 30.9188 30.4732 29.5623 29.5355 28.5621C28.5979 27.5619 27.3261 27 26 27H16C14.6739 27 13.4021 27.5619 12.4645 28.5621C11.5268 29.5623 11 30.9188 11 32.3333V35" stroke="#D3B572" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                             
+                <table class="mc-link">
+                    <tr>
+                        <td class="sign-in"><a href="">登入</a></td>
+                        <td class="sign-up"><a href="">註冊</a></td>
+                    </tr>
+                </table>
+                <p class="sign-up-text"><span>*</span>設定暱稱</p>
+                <div class="Icon-inside">
+                    <i class="fa-regular fa-user"></i>
+                    <input name="nameID" type="email" placeholder="暱稱ID" class="box" required>
+                </div>
+                <p class="sign-up-text-hint" style="color:black ;">-</p>
+                <p class="sign-up-text"><span>*</span>設定E-mail帳號</p>
+                <div class="Icon-inside">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input name="password" type="password" placeholder="E-mail 信箱" class="box" required>
+                </div>
+                <p class="sign-up-text-hint">請以半形輸入，E-mail不能重複註冊</p>
+                <p class="sign-up-text"><span>*</span>設定密碼</p>
+                <div class="Icon-inside">
+                    <i class="fa-solid fa-lock"></i>
+                    <input name="password" type="password" placeholder="Password密碼" class="box" required>
+                </div>
+                <p class="sign-up-text-hint">請以半形輸入，8-15個大小寫英文與數字組合</p>
+                <p class="sign-up-text"><span>*</span>密碼確認</p>
+                <div class="Icon-inside">
+                    <i class="fa-solid fa-lock"></i>
+                    <input name="password" type="password" placeholder="Password密碼" class="box" required>
+                </div>
+                <p class="sign-up-text-hint"  style="color:black ;">-</p>
+                <p class="sign-up-text">手機號碼</p>
+                <div class="Icon-inside">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <input name="password" type="password" placeholder="PhoneNumber" class="box" required>
+                </div>
+                <p class="sign-up-text-hint"  style="color:black ;">-</p>
+                <div class="sign-up-btn">
+                    <input type="submit" value="確認" class="mc-btn" style="font-size: 20px;">
+                </div>
+            </form>
+            <img src="./imgs/member-center/Polygon 4.png" class="small-polygon" alt="">
+            <img src="./imgs/member-center/Polygon 5.png" class="big-polygon" alt="">
+            <div class="sign-in-footer">
+                <p class="long-line"></p>
+                <p><a href="">About us</a> | <a href="">Contect us</a></p>
+                <p class="long-line"></p>
+            </div>
+        </div>
+        <div class="sing-in-img">
+            <div class="luxiem-logo">
+                <img src="./imgs/member-center/Luxiem.png" alt="">
+            </div>
+            <div class="sign-in-logo">
+                <img src="./imgs/member-center/sign-up.png" alt="">
+            </div>
+            <div class="sign-in-text">
+                <h3>
+                    Sign up
+                </h3>
+            </div>
+            <div class="sign-in-img">
+                <div class="sign-in-img1">
+                    <img src="./imgs/member-center/liver-cropped_VoxAkuma.png" alt=""></div>
+                <div class="sign-in-img2">
+                    <img src="./imgs/member-center/drink.PNG" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="desktop-footer">
+            <div class="desktop-footer-team3rd">
+                Copyright © 2022 Design by Team3rd. All Rights Reserved. <br>
+                此網站僅用於資策會專題發表
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.2.1-dist/js/bootstrap.bundle.js"></script>
+
+    <!-- Navbar/Footer js -->
+    <script src="./js/0.navbar_footer.js"></script>
+
+    <!-- 下面是 導覽列套用scroll滑動效果 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

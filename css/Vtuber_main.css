@@ -1,0 +1,2639 @@
+* {
+    margin: 0;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Kaisei Opti', serif;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.row {
+    /* position: relative; */
+}
+
+
+
+/* ---配件購物頁-------------------- */
+
+.desktop-itemshop-banner {
+    display: none;
+}
+
+.fitting-room {
+    background-color: #000;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    /* height: 2800px; */
+    /* overflow: hidden; */
+}
+.fitting-room h1 {
+    font-size: 32px;
+    font-family: Kaisei Opti;
+    color: #D3B572;
+    padding-left: 20px;
+    padding-top: 35px;
+    z-index: 1;
+}
+.spot-light {
+    width: 100%;
+    height: 350px;
+    /* outline: 1px solid red; */
+    position: relative;
+}
+.spot-light-ball {
+    position: absolute;
+    width: 320px;
+    height: 310px;
+    left: 30px;
+    top: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 30px #FFFFFF;
+}
+
+/* 下面是 兩個比較框 */
+.fitting-room-row {
+    position: relative;
+}
+.fitting-room-main {
+    width: 100%;
+    display: flex;
+    /* outline: 1px solid green; */
+    position: absolute;
+    top: -350px;
+}
+.col-6 {
+    /* outline: 1px solid red; */
+}
+.fitting-room-compare-role {
+    width: 130px;
+    border-bottom: 2px solid #D3B572;
+    margin: auto;
+}
+.fitting-room-compare-role a {
+    color: #667080;
+    font-size: 12px;
+}
+.fitting-room-compare-role-list {
+    /* width: 100px;
+    height: 150px; */
+}
+.fitting-room-compare-role-list a {
+    color: #667080;
+    font-size: 12px;
+}
+.dropdown-menu {
+    min-width: 0rem;
+    /* outline: 1px solid red; */
+}
+.role-change1 {
+    /* outline: 1px solid red; */
+}
+
+
+.fitting-room-roleplay {
+    width: 130px;
+    height: 160px;
+    border: 2px solid #667080;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+.fitting-room-roleplay img.roleplay-content-role {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0px 10px;
+}
+.fitting-room-roleplay-start-wear {
+    /* opacity: 0.5; */
+}
+
+/* 第一個比較框 Vox */
+/* 下面是按照 珍奶（手部） */
+.fitting-room-roleplay-hand {
+    /* outline: 1px solid red; */
+    width: 80px;
+    position: absolute;
+    right: -15px;
+    bottom: -37px;
+}
+/* 下面是 麥克風（物品） */
+.fitting-room-roleplay-object {
+    width: 70px;
+    position: absolute;
+    left: -3px;
+    bottom: -23px;
+}
+/* 下面是  機長帽（頭部） */
+.fitting-room-roleplay-head {
+    width: 65px;
+    position: absolute;
+    left: 31px;
+    top: -8px;
+}
+.roleplay-content-item {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 第二個比較框 Shu */
+/* 下面是按照 香蕉抱枕（手部） */
+.fitting-room-roleplay-hand2 {
+    /* outline: 1px solid red; */
+    /* width: 350px;
+    position: absolute;
+    right: -40px;
+    bottom: -340px; */
+}
+/* 頭部:shu眼鏡 */
+.fitting-room-roleplay-head2 {
+    /* width: 87px;
+    position: absolute;
+    left: 83px;
+    top: 65px; */
+}
+
+
+
+.fitting-room-compare-role-imgwrap-other {
+    /* width: 130px;
+    height: 160px; */
+    display: none;
+}
+/* .fitting-room-compare-role-imgwrap-other img {
+    width: 100%;
+    object-fit: cover;
+} */
+
+
+
+.fitting-room-tryit {
+    display: none;
+}
+
+.fitting-room-add {
+    margin-top: 20px;
+    /* outline: 1px solid red; */
+    padding-left: 18px;
+}
+.fitting-room-add-text, .fitting-room-buy-text {
+    /* outline: 1px solid red; */
+    color: #667080;
+    font-size: 14px;
+}
+.fitting-room-buy p {
+    color: #667080;
+}
+.fitting-room-add a:hover, .fitting-room-buy a:hover {
+    text-decoration: none;
+    color: #D3B572;
+}
+.fitting-room-buy p:hover {
+    color: #D3B572;
+}
+
+.fitting-room-add-text i {
+    color: #667080;
+    /* outline: 1px solid red; */
+    padding-top: 2px;
+    padding-left: 6px;
+}
+.fitting-room-add svg {
+    width: 92px;
+    /* outline: 1px solid red; */
+    margin-top: -50px;
+}
+.fitting-room-buy svg {
+    width: 82px;
+    margin-top: -50px;
+}
+
+.fitting-room-buy {
+    margin-top: -10px;
+    /* outline: 1px solid red; */
+    padding-left: 62px;
+}
+.fitting-room-buy-text {
+    /* outline: 1px solid red; */
+}
+.fitting-room-buy-text i {
+    color: #667080;
+    /* outline: 1px solid red; */
+    padding-top: 2px;
+    padding-left: 6px;
+}
+
+/* 下面是 Your coins */
+.fitting-room-yourcoin {
+    /* outline: 1px solid red; */
+}
+.fitting-room-yourcoin h3 {
+    font-size: 20px;
+    font-family: Kaisei Opti;
+    color: #fff;
+    padding-left: 20px;
+}
+.fitting-room-yourcoin-type {
+    /* outline: 1px solid red; */
+    padding-left: 50px;
+}
+.fitting-room-yourcoin-type-gold {
+    align-items: center;
+}
+.fitting-room-yourcoin-type-gold svg, .fitting-room-yourcoin-type-free svg {
+    width: 20px;
+    height: 20px;
+}
+.fitting-room-yourcoin-type-gold-number {
+    font-size: 15px;
+    color: #D3B572;
+    padding-left: 10px;
+    font-weight: 600;
+}
+.fitting-room-yourcoin-type-free {
+    align-items: center;
+    padding-left: 10px;
+}
+.fitting-room-yourcoin-type-free-number {
+    font-size: 15px;
+    color: #D3B572;
+    padding-left: 10px;
+    font-weight: 600;
+}
+.fitting-room-yourcoin-moreinfo {
+    display: none;
+}
+.desktop-itemtype-menu {
+    display: none;
+}
+
+
+.fitting-room-select {
+    width: 90px;
+    /* border-bottom: 1px solid #D3B572; */
+    /* outline: 1px solid red; */
+    margin-right: 95px;
+}
+.fitting-room-select a {
+    color: #fff;
+    font-size: 14px;
+}
+.fitting-room-select:hover a {
+    color: #D3B572;
+}
+.fitting-room-select-list a {
+    /* color: #667080; */
+    font-size: 12px;
+    line-height: 26px;
+}
+
+.fitting-room-itemselect-menu {
+    width: 100%;
+    /* outline: 1px solid red; */
+    position: relative;
+    /* z-index: 1; */
+}
+.fitting-room-itemselect-menu p {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 0px;
+    position: absolute;
+    top: -51px;
+    right: 20px;
+}
+.fitting-room-itemselect-menu i {
+    padding-left: 3px;
+}
+.desktop-itemshop-tags {
+    display: none;
+}
+
+/* 配件購物 手機漢堡夾 */
+.mobile-itemtype-menu {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    /* border-radius: 5px; */
+    /* position: relative; */
+    /* position: absolute; */
+    top: 0px;
+    position: fixed;
+    left: 375px;
+    z-index: 1;
+    transition: .5s;
+    overflow-y: scroll;
+}
+.mobile-itemtype-menu-on {
+    left: 0px;
+}
+
+.mobile--itemtype-menu-close {
+    text-align: center;
+    width: 28px;
+    font-size: 23px;
+    /* outline: 1px solid red; */
+    position: absolute;
+    right: 20px;
+    top: 50px;
+}
+.mobile-itemtype-menu-hide {
+    left: 375px;
+}
+.mobile-itemtype-menu-hotfield {
+    /* outline: 1px solid red; */
+    padding-left: 50px;
+}
+
+.mobile-itemtype-menu h4 {
+    font-size: 16px;
+    color: #D3B572;
+    padding-top: 90px;
+}
+h4.mobile-itemtype-menu-hotfield-title2 {
+    padding-top: 30px;
+}
+.mobile-itemtype-menu ul {
+    list-style-type: none;
+    line-height: 40px;
+    padding-left: 20px;
+    /* margin: auto; */
+}
+.mobile-itemtype-topic-name {
+    color: #667080;
+    font-weight: 500;
+    font-size: 14px;
+}
+.mobile-itemtype-topic-name:hover {
+    text-decoration: none;
+    color: #D3B572;
+}
+.mobile-itemtype-topic-list li a {
+    color: #667080;
+    font-size: 14px;
+}
+.mobile-itemtype-topic-list li a:hover {
+    text-decoration: none;
+    color: #D3B572;
+}
+.mobile-itemtype-topic ul {
+    height: 0px;
+    overflow: hidden;
+    transition: .5s;
+}
+.mobile-itemtype-topic:hover ul {
+    /* outline: 1px solid red; */
+    height: 220px;
+}
+
+
+/* ---配件清單--- */
+.fitting-room-items-list-wrap {
+    /* outline: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
+}
+.fitting-room-items-list-row1 {
+    width: 300px;
+    /* outline: 1px solid red; */
+    padding-top: 25px;
+    /* padding-left: 50px;
+    padding-right: 50px; */
+}
+.fitting-room-item-unit {
+    /* outline: 1px solid red; */
+    width: 100px;
+}
+
+.fitting-room-item-imgwrap {
+    width: 75px;
+    height: 75px;
+    /* outline: 1px solid red; */
+    border: 2px solid #667080;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 點擊+ icon讓.fitting-room-item-imgwrap邊框變黃色 */
+.active {
+    border: 2px solid #D3B572;
+}
+
+
+/* 喜愛追蹤 飄入愛心 */
+.fitting-room-item-imgwrap-follow-heart svg {
+    width: 16px;
+    height: 16px;
+    /* outline: 1px solid red; */
+    position: absolute;
+    right: 4px;
+    bottom: -20px;
+    z-index: 1;
+    transition: .5s;
+}
+.fitting-room-item-imgwrap:hover .fitting-room-item-imgwrap-follow-heart svg {
+    bottom: 3px;
+}
+.follow-heart-show {
+    fill: #D3B572;
+}
+.fitting-room-item-imgwrap-add-wear svg {
+    /* outline: 1px solid red; */
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 28px;
+    right: 26px;
+    transition: .5s;
+    display: none;
+    z-index: 1;
+}
+.fitting-room-item-imgwrap:hover .fitting-room-item-imgwrap-add-wear svg {
+    display: block;
+}
+
+.fitting-room-item-imgwrap img {
+    width: 100%;
+    object-fit: cover;
+    opacity: 1;
+}
+.fitting-room-item-imgwrap:hover img {
+    opacity: 0.5;
+}
+
+.fitting-room-item-name {
+    padding-top: 10px;
+    width: 75px;
+    /* outline: 1px solid red; */
+}
+.fitting-room-item-name svg {
+    width: 14px;
+    height: 14px;
+}
+.fitting-room-item-name p {
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+.fitting-room-item-name-price {
+    padding-top: 6px;
+    width: 75px;
+}
+.fitting-room-item-name-price-gold svg, .fitting-room-item-name-price-free svg {
+    width: 14px;
+    height: 14px;
+}
+.fitting-room-item-name-price-gold-number, .fitting-room-item-name-price-free-number {
+    font-size: 14px;
+    color: #D3B572;
+    padding-left: 3px;
+}
+.desktop-fitting-room-item-unit {
+    /* display: none; */
+}
+
+.mobile-items-list-arrow {
+    /* outline: 1px solid red; */
+    width: 100%;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    top: 670px;
+}
+.mobile-items-list-arrow a {
+    color: #D3B572;
+}
+.desktop-items-list-arrow {
+    display: none;
+}
+.desktop-items-list-arrow i, .desktop-items-list-arrow a {
+    display: none;
+}
+
+
+/* ---代幣商店頁--------------------------- */
+.coinshop {
+    background-color: #000;
+    width: 100%;
+    padding-top: 73px;
+    /* padding-bottom: 380px; */
+
+    overflow: hidden;
+}
+
+.freecoin-mission-title, .goldcoin-title {
+    margin-left: 20px;
+}
+.freecoin-mission-title-en, .goldcoin-title-en {
+    font-size: 24px;
+    color: #D3B572;
+    font-family: Kaisei Opti;
+    /* outline: 1px solid red; */
+}
+.freecoin-mission-title-tc, .goldcoin-title-tc {
+    font-size: 16px;
+    color: #fff;
+    /* outline: 1px solid red; */
+    padding-top: 4px;
+    padding-left: 12px;
+}
+/* 代幣商店 3D輪播牆 */
+[type=radio] {
+    display: none;
+}
+
+#carousel {
+    /* outline: 1px solid red; */
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+#carousel label {
+    margin: auto;
+    width: 45%;
+    height: 100%;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+
+.complete-imgwrap {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    left: 35px;
+    top: 70px;
+}
+
+.complete-imgwrap img {
+    width: 100%;
+}
+
+#s1:checked~#slider4,
+#s2:checked~#slider5,
+#s3:checked~#slider1,
+#s4:checked~#slider2,
+#s5:checked~#slider3 {
+    /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37); */
+    transform: translate3d(-90%, 0, -200px);
+    filter: grayscale(70%);
+}
+
+#s1:checked~#slider5,
+#s2:checked~#slider1,
+#s3:checked~#slider2,
+#s4:checked~#slider3,
+#s5:checked~#slider4 {
+    /* box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .3), 0 2px 2px 0 rgba(0, 0, 0, .2); */
+    transform: translate3d(-45%, 0, -100px);
+    filter: grayscale(40%);
+}
+
+#s1:checked~#slider1,
+#s2:checked~#slider2,
+#s3:checked~#slider3,
+#s4:checked~#slider4,
+#s5:checked~#slider5 {
+    /* box-shadow: 0 13px 25px 0 rgba(0, 0, 0, .3), 0 11px 7px 0 rgba(0, 0, 0, .19); */
+    transform: translate3d(0, 0, 0);
+}
+
+#s1:checked~#slider2,
+#s2:checked~#slider3,
+#s3:checked~#slider4,
+#s4:checked~#slider5,
+#s5:checked~#slider1 {
+    /* box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .3), 0 2px 2px 0 rgba(0, 0, 0, .19); */
+    transform: translate3d(45%, 0, -100px);
+    filter: grayscale(40%);
+}
+
+#s1:checked~#slider3,
+#s2:checked~#slider4,
+#s3:checked~#slider5,
+#s4:checked~#slider1,
+#s5:checked~#slider2 {
+    /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37); */
+    transform: translate3d(90%, 0, -200px);
+    filter: grayscale(70%);
+}
+
+/* 代幣商店頁 Your coins */
+.coinshop-yourcoins {
+    /* outline: 1px solid green; */
+    padding-bottom: 70px;
+    margin-top: 30px;
+}
+.coinshop-yourcoins h3 {
+    font-size: 20px;
+    font-family: Kaisei Opti;
+    color: #fff;
+    text-align: center;
+    /* padding-top: 10px; */
+    /* outline: 1px solid red; */
+    position: relative;
+    z-index: 1;
+}
+.coinshop-yourcoin-type {
+    border: 1px solid #D3B572;
+    width: 180px;
+    height: 46px;
+    border-radius: 10px;
+    /* margin: auto; */
+    position: absolute;
+    left: 100px;
+    top: 380px;
+}
+.coinshop-yourcoin-type-gold {
+    align-items: center;
+    padding-left: 20px;
+}
+.coinshop-yourcoin-type-free {
+    align-items: center;
+    padding-left: 25px;
+}
+.coinshop-yourcoin-type-gold svg, .coinshop-yourcoin-type-free svg {
+    width: 20px;
+    height: 20px;
+}
+.coinshop-yourcoin-type-gold-number, .coinshop-yourcoin-type-free-number {
+    font-size: 16px;
+    color: #D3B572;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+/* 金幣禮包 */
+.coinshop-gold-package-row {
+    /* outline: 1px solid red; */
+    padding-top: 10px;
+}
+.coinshop-gold-package-unit {
+    /* outline: 1px solid red; */
+    /* padding: 0 6px; */
+    margin-right: 15px;
+}
+
+.coinshop-gold-package-unit-imgwrap {
+    width: 155px;
+    height: 155px;
+
+    position: relative;
+}
+.coinshop-gold-package-unit-imgwrap img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.coinshop-gold-package-unit-goldnumber-wrap {
+    /* outline: 1px solid red; */
+    width: 80px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top:50px;
+    left: 50px;
+}
+.coinshop-gold-package-unit-goldnumber {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+.coinshop-gold-package-unit-goldnumber-wrap svg {
+    margin-left: 5px;
+    width: 17px;
+    height: 17px;
+}
+
+.coinshop-gold-package-unit-ntd-wrap {
+    /* outline: 1px solid red; */
+    display: flex;
+    width: 60px;
+    height: 20px;
+    background-color: #D3B572;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:80px;
+    left: 48px;
+    z-index: 1;
+}
+.coinshop-gold-package-unit-ntd-wrap:hover {
+    background-color: #000;
+}
+.coinshop-gold-package-unit-ntd, .coinshop-gold-package-unit-ntd-price {
+    font-size: 12px;
+    color: #000;
+    font-weight: 500;
+}
+.coinshop-gold-package-unit-ntd-wrap:hover .coinshop-gold-package-unit-ntd, .coinshop-gold-package-unit-ntd-wrap:hover .coinshop-gold-package-unit-ntd-price {
+    color: #fff;
+}
+
+.coinshop-gold-package-unit-ntd-price {
+    margin-left: 5px;
+}
+.coinshop-gold-package-unit-deco-imgwrap {
+    width: 40px;
+    height: 40px;
+    /* outline: 1px solid red; */
+    position: absolute;
+    bottom: 6px;
+    right: 5px;
+}
+.coinshop-gold-package-unit-deco-imgwrap img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.coinshop-gold-package-unit-deco-imgwrap2 {
+    /* outline: 1px solid red; */
+    width: 62px;
+    height: 32px;
+    position: absolute;
+    bottom: 12px;
+    right: 0px;
+}
+.coinshop-gold-package-unit-deco-imgwrap2 img {
+    width: 100%;
+    object-fit: cover;
+}
+.coinshop-gold-package-unit-deco-imgwrap3 {
+    /* outline: 1px solid red; */
+    width: 66px;
+    height: 32px;
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+}
+.coinshop-gold-package-unit-deco-imgwrap3 img {
+    width: 100%;
+    object-fit: cover;
+}
+.coinshop-gold-package-unit-deco-imgwrap4 {
+    /* outline: 1px solid red; */
+    width: 60px;
+    height: 32px;
+    position: absolute;
+    bottom: 16px;
+    right: 0px;
+}
+.coinshop-gold-package-unit-deco-imgwrap4 img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 金幣購買流程QA */
+.coinshop-buy-qa {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    /* outline: 1px solid red; */
+}
+.wrapper {
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+.collapsible {
+    width: 87%;
+    overflow: hidden;
+    font-weight: 500;
+}
+.collapsible input {
+    display: none;
+}
+
+.collapsible label {
+    font-size: 14px;
+    position: relative;
+    font-weight: 500;
+    color: #fff;
+    background-color: #000;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding:  10px;
+    border-bottom: 2px solid #D3B572;
+    z-index: 1;
+}
+.collapsible label:after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 18px;
+    height: 18px;
+    background: url(../icons/angle-down-solid.svg) no-repeat 0 0;
+    transition: all 0.3s ease;
+}
+
+.collapsible input:checked + label:after {
+    transform: rotate(180deg);
+}
+
+.collapsible-text {
+    min-height: 1px;
+    overflow: hidden;
+    /* border-radius: 4px; */
+    line-height: 2;
+    position: relative;
+    top: -85%;
+    opacity: .5;
+    transition: all 0.3s ease;
+}
+.collapsible-text p {
+    color: #fff;
+    font-size: 12px;
+}
+
+.collapsible input:checked ~ .collapsible-text {
+    max-height: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity: 1;
+    top: 0;
+}
+
+.collapsible-text p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---RWD桌機版：1920px--- */
+@media screen and (min-width: 1600px) {
+
+
+    /* ---配件購物頁-------------------- */
+    .desktop-itemshop-banner {
+        display: block;
+        width: 100%;
+        height: 600px;
+        /* outline: 1px solid red; */
+    }
+
+    /* 下面是主Banner輪播牆 */
+    .desktop-itemshop-banner-carousel {
+        width: 100%;
+        height: 600px;
+        /* outline: 1px solid blue; */
+        position: relative;
+        overflow: hidden;
+    }
+    .itemshop-banner-carousel-train {
+        width: 500%;
+        height: 600px;
+        transition: .5s;
+    }
+    .itemshop-banner-carousel-train li {
+        width: 100%;
+        height: 600px;
+        position: relative;
+    }
+
+    .desktop-itemshop-banner-imgwrap {
+        width: 100%;
+        height: 600px;
+        position: relative;
+    }
+    .desktop-itemshop-banner-imgwrap img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        object-position: 0px -220px; 
+    }
+    .itemshop-banner-role1 {
+        /* outline: 2px solid green; */
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        bottom: 0px;
+        left: 550px;
+        overflow: hidden;
+    }
+    .itemshop-banner-role-imgwrap {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+    }
+    .itemshop-banner-role-imgwrap img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: 0px -20px;
+    }
+    /* 輪播牆Vox */
+    .itemshop-banner-role-hand-imgwrap1 {
+        /* outline: 1px solid red; */
+        width: 120px;
+        position: absolute;
+        bottom: -25px;
+        left: 20px;
+        transform-origin: bottom center;
+        animation: carousel-vox-hand 4s infinite linear forwards;
+    }
+    .itemshop-banner-role-hand-imgwrap1 img {
+        width: 100%;
+        object-fit: cover;
+    }
+    @keyframes carousel-vox-hand {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(-10deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .itemshop-banner-role-head-imgwrap1 {
+        /* outline: 1px solid red; */
+        width: 220px;
+        position: absolute;
+        top: -60px;
+        left: 90px;
+    }
+    .itemshop-banner-role-head-imgwrap1 img {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+
+
+    /* 輪播牆Ike */
+    .itemshop-banner-role2 {
+        /* outline: 2px solid green; */
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        bottom: 0px;
+        left: 1000px;
+        overflow: hidden;
+    }
+    .itemshop-banner-role-head-imgwrap2 {
+        /* outline: 1px solid red; */
+        width: 280px;
+        position: absolute;
+        top: -43px;
+        left: 54px;
+    }
+    .itemshop-banner-role-head-imgwrap2 img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .itemshop-banner-role-hand-imgwrap2 {
+        width: 330px;
+        position: absolute;
+        top: 185px;
+        left: 30px;
+        animation: carousel-ike-hand 4s infinite linear forwards;
+    }
+    .itemshop-banner-role-hand-imgwrap2 img {
+        width: 100%;
+        object-fit: cover;
+    }
+    @keyframes carousel-ike-hand {
+        0% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(10deg);
+        }
+        40% {
+            transform: rotate(0deg);
+        }
+        70% {
+            transform: rotate(-8deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+
+
+    /* 輪播牆Mysta */
+    .itemshop-banner-role3 {
+        /* outline: 2px solid green; */
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        bottom: 0px;
+        left: 830px;
+        overflow: hidden;
+    }
+    .itemshop-banner-role-hand-imgwrap3 {
+        /* outline: 1px solid red; */
+        width: 220px;
+        position: absolute;
+        right: -20px;
+        bottom: -150px;
+        transform-origin: bottom center;
+        animation: carousel-mysta-hand 4s infinite linear forwards;
+    }
+    .itemshop-banner-role-hand-imgwrap3 img {
+        width: 100%;
+        object-fit: cover;
+    }
+    @keyframes carousel-mysta-hand {
+        0% {
+            transform: rotate(0deg);
+        }
+        40% {
+            transform: rotate(6deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    .itemshop-banner-role-object-imgwrap3 {
+        /* outline: 1px solid red; */
+        width: 650px;
+        position: absolute;
+        top: 100px;
+        left: 610px;
+        animation: carousel-mysta-object 8s infinite linear forwards;
+    }
+    .itemshop-banner-role-object-imgwrap3 img {
+        width: 100%;
+        object-fit: scale-down;
+        object-position: 10px 0;
+    }
+    @keyframes carousel-mysta-object {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(30px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+
+    /* 輪播牆Luca */
+    .itemshop-banner-role4 {
+        /* outline: 2px solid green; */
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        bottom: 0px;
+        left: 800px;
+        overflow: hidden;
+    }
+    .itemshop-banner-role-imgwrap-luca {
+        /* outline: 1px solid red; */
+        transform-origin: bottom center;
+        animation: carousel-luca-role 5s infinite linear forwards;
+    }
+    @keyframes carousel-luca-role {
+        0% {
+            transform: translateX(0px);
+        }
+        25% {
+            transform: translateX(10px);
+        }
+        50% {
+            transform: translateX(0px);
+        }
+        75% {
+            transform: translateX(-10px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    }
+    .itemshop-banner-role-hand-imgwrap4 {
+        /* outline: 1px solid red; */
+        width: 200px;
+        position: absolute;
+        bottom: -150px;
+        left: 10px;
+    }
+    .itemshop-banner-role-hand-imgwrap4 img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+    /* 輪播牆Shu */
+    .itemshop-banner-role5 {
+        /* outline: 2px solid green; */
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        bottom: 0px;
+        left: 730px;
+        overflow: hidden;
+    }
+    .itemshop-banner-role-hand-imgwrap5 {
+        /* outline: 1px solid red; */
+        width: 240px;
+        position: absolute;
+        left: 960px;
+        top: 340px;
+        z-index: 1;
+        transform-origin: bottom center;
+        animation: carousel-shu-hand 4s infinite linear forwards;
+    }
+    @keyframes carousel-shu-hand {
+        0% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(1deg);
+        }
+        50% {
+            transform: rotate(0deg);
+        }
+        75% {
+            transform: rotate(-1deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    .itemshop-banner-role-hand-imgwrap5 img {
+        width: 100%;
+        object-fit: scale-down;
+        object-position: 10px 0px;
+    }
+    .itemshop-banner-role-object-imgwrap5 {
+        width: 120px;
+        position: absolute;
+        bottom: 120px;
+        left: 142px;
+    }
+    .itemshop-banner-role-object-imgwrap5 img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+    /* slider dots */
+    .desktop-itemshop-banner-carousel-slider-dots {
+        /* outline: 1px solid red; */
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+    }
+    .desktop-itemshop-banner-carousel-slider-dots li {
+        width: 35px;
+        height: 8px;
+        border-radius: 5px;
+        background-color: #fff;
+        margin: 0 10px;
+        transition: .5s;
+        cursor: pointer;
+    }
+    #desktop-itemshop-banner-carousel-slider-dots-no1 {
+        margin-left: 0;
+        /* width: 35px; */
+        background-color: #D3B572;
+    }
+    .desktop-itemshop-banner-carousel-slider-dots li:hover {
+        /* background-color: #D3B572; */
+    }
+    
+
+    /* Fitting Room */
+    .desktop-itemshop-banner-carousel-slider-dots {
+        position: absolute;
+        left: 240px;
+    }
+    .fitting-room h1 {
+        font-size: 128px;
+        font-family: Kaisei Opti;
+        /* outline: 1px solid red; */
+        padding-top: 80px;
+        position: absolute;
+        right: 240px;
+    }   
+    .spot-light-ball {
+        width: 685px;
+        height: 685px;
+        left: 200px;
+        top: 100px;
+    }
+    .fitting-room-yourcoin {
+        position: absolute;
+        left: 240px;
+        top: 800px;
+    }
+    .fitting-room-yourcoin h3 {
+        font-size: 48px;
+        font-family: Kaisei Opti;
+        padding-left: 0px;
+    }
+    .fitting-room-yourcoin-type {
+        padding-left: 0px;
+    }
+    .fitting-room-yourcoin-type-gold svg, .fitting-room-yourcoin-type-free svg {
+        width: 35px;
+        height: 35px;
+    }
+    .fitting-room-yourcoin-type-free {
+        padding-left: 35px;
+    }
+    .fitting-room-yourcoin-type-gold-number {
+        font-size: 24px;
+    }
+    .fitting-room-yourcoin-type-free-number {
+        font-size: 24px;
+    }
+    .fitting-room-yourcoin-moreinfo {
+        display: block;
+    }
+    .fitting-room-yourcoin-moreinfo {
+        /* outline: 1px solid red; */
+        padding-top: 10px;
+        padding-left: 123px;
+    }
+    .fitting-room-yourcoin-moreinfo a {
+        font-size: 14px;
+        color: #fff;
+    }
+    .fitting-room-yourcoin-moreinfo a:hover {
+        color: #D3B572;
+        text-decoration: none;
+    }
+    /* 篩選條件 */
+    .fitting-room-select-wrap {
+        position: relative;
+        width: 100%;
+        /* outline: 1px solid red; */
+    }
+    .fitting-room-select{
+        width: 100px;
+        /* outline: 1px solid red; */
+        margin: 0px;
+        text-align: right;
+        position: absolute;
+        top: 405px;
+        left: 945px;
+    }
+
+    /* 桌機 Hashtags */
+    .desktop-itemshop-tags {
+        display: block;
+        width: 350px;
+        padding: 30px 10px;
+        margin-left: 1320px;
+        margin-top: 180px;
+        /* outline: 1px solid red; */
+    }
+    .desktop-itemshop-tags-name {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        border-radius: 20px;
+        background-color: #fff;
+        color: #667080;
+        padding: 10px 18px;
+        margin: 0px 9px 18px;
+    }
+    .desktop-itemshop-tags-name:hover {
+        text-decoration: none;
+        background-color: #D3B572;
+        color: #fff;
+    }
+
+
+
+    /* 配件購物 桌機配件類型列表 */
+    .desktop-itemtype-menu {
+        display: block;
+        /* outline: 1px solid red; */
+        position: relative;
+    }
+    .desktop-itemtype-menu-all {
+        /* outline: 1px solid red; */
+        position: absolute;
+        top: -350px;
+        /* left: 240px; */
+        left: 300px;
+    }
+    .desktop-itemtype-menu h4 {
+        color: #D3B572;
+        font-size: 24px;
+        padding-top: 35px;
+    }
+    .desktop-itemtype-menu ul {
+        list-style-type: none;
+        line-height: 55px;
+    }
+    .desktop-itemtype-topic-name {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .desktop-itemtype-topic-name:hover {
+        text-decoration: none;
+        color: #D3B572;
+    }
+    .desktop-itemtype-topic-list li a {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .desktop-itemtype-topic-list li a:hover {
+        text-decoration: none;
+        /* color: #fff; */
+        color: #D3B572;
+    }
+    .desktop-itemtype-topic-list {
+        /* outline: 1px solid red; */
+    }
+    .desktop-itemtype-topic ul {
+        height: 0px;
+        overflow: hidden;
+        transition: .5s;
+    }
+    .desktop-itemtype-topic:hover ul {
+        /* outline: 1px solid red; */
+        height: 300px;
+    }
+
+
+
+
+
+
+
+
+    .fitting-room-select a {
+        font-size: 16px;
+    }
+    .fitting-room-select-list a {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+
+    /* 下面是 兩個比較框 */
+    .fitting-room-main {
+        top: -100px;
+        left: 190px;
+        /* outline: 1px solid green; */
+        width: 60%;
+    }
+    .fitting-room-compare-content {
+        position: relative;
+    }
+    .fitting-room-compare-role {
+        width: 255px;
+    }
+    .fitting-room-compare-role a {
+        font-size: 16px;
+    }
+    .fitting-room-compare-role-list a {
+        font-size: 16px;
+    }
+
+    .fitting-room-roleplay {
+        width: 255px;
+        height: 280px;
+    }
+    .fitting-room-roleplay img.roleplay-content-role {
+        object-position: 0px 0px;
+    }
+    /* 第一個比較框 Vox */
+    /* 下面是按照 珍奶（手部） */
+    .fitting-room-roleplay-hand {
+        /* outline: 1px solid red; */
+        width: 160px;
+        position: absolute;
+        right: -30px;
+        bottom: -85px;
+    }
+    /* 下面是 麥克風（物品） */
+    .fitting-room-roleplay-object {
+        width: 130px;
+        position: absolute;
+        left: 10px;
+        bottom: -40px;
+    }
+    /* 下面是  機長帽（頭部） */
+    .fitting-room-roleplay-head {
+        width: 150px;
+        position: absolute;
+        left: 52px;
+        top: -46px;
+    }
+    .roleplay-content-item {
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+
+
+
+
+    .fitting-room-tryit {
+        display: block;
+    }
+    .fitting-room-tryit p {
+        /* outline: 1px solid red; */
+        width: 160px;
+        font-size: 48px;
+        color: #D3B572;
+        font-family: Kaisei Opti;
+        position: absolute;
+        top: 100px;
+        left: 224px;
+        transform: rotate(90deg);
+    }
+
+    .fitting-room-add {
+        margin-top: 30px;
+        padding-left: 30px;
+    }
+    .fitting-room-add-text p, .fitting-room-buy-text p {
+        font-size: 20px;
+    }
+    .fitting-room-add-text i {
+        font-size: 18px;
+        padding-top: 6px;
+        padding-left: 6px;
+    }
+    .fitting-room-add svg {
+        width: 120px;
+        height: auto;
+    }
+    .fitting-room-buy svg {
+        width: 100px;
+        height: auto;
+    }
+
+    .fitting-room-buy {
+        margin-top: -50px;
+        padding-left: 185px;
+    }
+
+    .fitting-room-buy-text i {
+        font-size: 18px;
+        padding-top: 7px;
+        padding-left: 6px;
+    }
+
+    /* 配件清單 */
+    .fitting-room-items-list-wrap {
+        /* outline: 1px solid red; */
+        width: 50%;
+        display: block;
+        margin-right: 0;
+        margin-left: 250px;
+    }
+    .fitting-room-items-list-rowtop {
+        margin-top: 50px;
+        z-index: 1;
+        /* outline: 1px solid red; */
+    }
+    .fitting-room-items-list-row1 {
+        /* outline: 1px solid red; */
+        width: 100%;
+        padding: 0;
+        /* padding-top: 30px; */
+        margin-left: 0px;
+    }
+    .fitting-room-item-imgwrap {
+        width: 135px;
+        height: 135px;
+    }
+    /* 喜愛追蹤 飄入愛心 */
+    .fitting-room-item-imgwrap-follow-heart svg {
+        width: 20px;
+        height: 20px;
+        right: 5px;
+        bottom: -22px;
+    }
+    .fitting-room-item-imgwrap:hover .fitting-room-item-imgwrap-follow-heart svg {
+        bottom: 4px;
+    }
+    .fitting-room-item-imgwrap-add-wear svg {
+        /* outline: 1px solid red; */
+        width: 22px;
+        height: 22px;
+        top: 60px;
+        right: 55px;
+    }
+
+    .fitting-room-item-name, .fitting-room-item-name-price {
+        /* outline: 1px solid red; */
+        width: 130px;
+    }
+    .fitting-room-item-name p {
+        font-size: 16px;
+    }
+    .fitting-room-item-name svg {
+        width: 20px;
+        height: 20px;
+    }
+    .fitting-room-item-name-price-gold svg, .fitting-room-item-name-price-free svg {
+        width: 20px;
+        height: 20px;
+    }
+    .fitting-room-item-name-price-gold-number, .fitting-room-item-name-price-free-number {
+        font-size: 18px;
+        padding-left: 6px;
+    }
+    .desktop-fitting-room-item-unit {
+        /* display: block; */
+    }
+
+    /* 桌機版 頁尾分頁 */
+    .desktop-items-list-arrow {
+        display: block;
+        /* outline: 1px solid red; */
+        padding-top: 30px;
+        padding-left: 90px;
+    }
+    .desktop-items-list-arrow i {
+        display: block;
+        color: #D3B572;
+        width: 24px;
+        height: 24px;
+        padding: 5px 15px;
+    }
+    .desktop-items-list-arrow a {
+        /* outline: 1px solid red; */
+        display: block;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 0;
+        padding: 0 15px;
+    }
+    .desktop-items-list-arrow a:hover {
+        text-decoration: none;
+    }
+
+    .fitting-room-itemselect-menu {
+        display: none;
+    }
+
+
+    .mobile-itemtype-menu {
+        display: none;
+    }
+    .mobile-items-list-arrow {
+        display: none;
+    }
+    .mobile-items-list-arrow-left, .mobile-items-list-arrow-right {
+        display: none;
+    }
+
+
+    /* ---代幣商店頁--------------------------- */
+    .coinshop {
+        padding-top: 112px;
+    }
+    .freecoin-mission-title, .goldcoin-title {
+        margin-left: 240px;
+    }
+    .freecoin-mission-title-en, .goldcoin-title-en {
+        font-size: 48px;
+        color: #D3B572;
+    }
+    .freecoin-mission-title-tc, .goldcoin-title-tc {
+        font-size: 24px;
+        color: #fff;
+        padding-top: 12px;
+        padding-left: 18px;
+    }
+    /* 代幣商店 3D輪播牆 */
+    #carousel {
+        height: 500px;
+        padding-top: 45px;
+    }
+    #carousel label {
+        width: 25%;
+    }
+
+    .complete-imgwrap {
+        width: 230px;
+        height: 100px;
+        position: absolute;
+        left: 135px;
+        top: 165px;
+    }
+
+    /* 代幣商店頁 Your coins */
+    .coinshop-yourcoins {
+        padding-bottom: 70px;
+        margin-top: 90px;
+    }
+    .coinshop-yourcoins h3 {
+        font-size: 48px;
+        text-align: center;
+    }
+    .coinshop-yourcoin-type {
+        width: 755px;
+        height: 140px;
+        left: 580px;
+        top: 832px;
+    }
+    .coinshop-yourcoin-type-gold {
+        padding-left: 160px;
+    }
+    .coinshop-yourcoin-type-free {
+        padding-left: 160px;
+    }
+    .coinshop-yourcoin-type-gold svg, .coinshop-yourcoin-type-free svg {
+        width: 55px;
+        height: 55px;
+    }
+    .coinshop-yourcoin-type-gold-number, .coinshop-yourcoin-type-free-number {
+        font-size: 48px;
+        padding-left: 20px;
+        font-weight: 500;
+    }
+    
+    .goldcoin-title {
+        /* outline: 1px solid red; */
+        margin-top: 150px;
+    }
+
+    /* 金幣禮包 */
+    .coinshop-gold-package-unit {
+        margin-right: 300px;
+    }
+    .coinshop-gold-package-row-no1 {
+        /* outline: 1px solid red; */
+        margin-left: 560px;
+        /* margin-top: 50px; */
+    }
+    .coinshop-gold-package-row-no2 {
+        /* outline: 1px solid blue; */
+        position: absolute;
+        top: 1350px;
+        left: 280px;
+    }
+
+    .coinshop-gold-package-unit-imgwrap {
+        width: 350px;
+        height: 350px;
+    }
+    .coinshop-gold-package-unit-goldnumber-wrap {
+        width: 180px;
+        top: 108px;
+        left: 90px;
+    }
+    .coinshop-gold-package-unit-goldnumber {
+        font-size: 48px;
+    }
+    .coinshop-gold-package-unit-goldnumber-wrap svg {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+    
+    .coinshop-gold-package-unit-ntd-wrap {
+        width: 120px;
+        height: 40px;
+        top:187px;
+        left: 112px;
+    }
+    .coinshop-gold-package-unit-ntd, .coinshop-gold-package-unit-ntd-price {
+        font-size: 20px;
+    }
+    .coinshop-gold-package-unit-ntd-price {
+        margin-left: 10px;
+    }
+    .coinshop-gold-package-unit-deco-imgwrap {
+        width: 88px;
+        height: 70px;
+        bottom: 30px;
+        right: 10px;
+    }
+    .coinshop-gold-package-unit-deco-imgwrap2 {
+        width: 140px;
+        height: 75px;
+        bottom: 15px;
+        right: 0px;
+    }
+    .coinshop-gold-package-unit-deco-imgwrap3 {
+        /* outline: 1px solid red; */
+        width: 160px;
+        height: 67px;
+        bottom: 12px;
+        right: 0px;
+    }
+    .coinshop-gold-package-unit-deco-imgwrap4 {
+        /* outline: 1px solid red; */
+        width: 145px;
+        height: 110px;
+        bottom: 6px;
+        right: -5px;
+    }
+
+    /* 金幣購買流程QA */
+    .coinshop-buy-qa {
+        margin-top: 340px;
+        margin-bottom: 60px;
+    }
+    .wrapper {
+        margin-top: 18px;
+    }
+    .collapsible {
+        width: 65%;
+    }
+    .collapsible label {
+        font-size: 24px;
+    }
+    .collapsible label:after {
+        width: 28px;
+        height: 28px;
+    }
+    .collapsible-text p {
+        font-size: 20px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ---配件詳細內容頁（光箱頁）-------------------- */
+.itemshop-itemdetails {
+    /* width: 350vh; */
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 3;
+    display: none;
+}
+
+.itemshop-itemdetails-wrap {
+    /* outline: 1px solid red; */
+    width: 95%;
+    height: 350px;
+    background-color: #000;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.itemshop-itemdetails-name {
+    /* outline: 1px solid red; */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 35px;
+}
+
+/* 左邊配件圖和價錢 */
+.itemshop-itemdetails-item-unit {
+    /* outline: 1px solid red; */
+    margin-top: 25px;
+    padding-left: 10px;
+}
+
+.itemshop-itemdetailsm-item-imgwrap {
+    width: 133px;
+    height: 133px;
+    border: 2px solid #667080;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.itemshop-itemdetailsm-item-imgwrap img {
+    width: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: .5s;
+}
+
+.itemshop-itemdetailsm-item-imgwrap:hover img {
+    opacity: .5;
+}
+
+/* 喜愛追蹤 飄入愛心 */
+.itemshop-itemdetails-follow-heart svg {
+    width: 20px;
+    height: 20px;
+    /* outline: 1px solid red; */
+    position: absolute;
+    right: 6px;
+    bottom: -20px;
+    transition: .5s;
+}
+
+.itemshop-itemdetailsm-item-imgwrap:hover .itemshop-itemdetails-follow-heart svg {
+    bottom: 5px;
+}
+
+.itemshop-itemdetails-item-price {
+    /* outline: 1px solid red; */
+    padding-top: 18px;
+}
+
+.itemshop-itemdetails-item-price-gold svg,
+.itemshop-itemdetails-item-price-free svg {
+    width: 16px;
+    height: 16px;
+}
+
+.itemshop-itemdetails-item-price-gold-number,
+.itemshop-itemdetails-item-price-free-number {
+    font-size: 16px;
+    font-weight: 500;
+    color: #D3B572;
+    padding-left: 6px;
+}
+
+.itemshop-itemdetails-item-price-gold {
+    padding-left: 18px;
+}
+
+.itemshop-itemdetails-item-price-free {
+    padding-left: 20px;
+}
+
+/* 右邊 配件詳細資訊介紹 */
+.itemshop-itemdetails-item-unit-info {
+    /* outline: 1px solid red; */
+    width: 195px;
+    position: absolute;
+    right: 5px;
+    top: 73px;
+}
+
+.itemshop-itemdetails-item-details,
+.itemshop-itemdetails-item-story {
+    text-align: left;
+}
+
+.itemshop-itemdetails-item-moretext-title {
+    font-size: 10px;
+    color: #D3B572;
+    padding-top: 10px;
+}
+
+.itemshop-itemdetails-item-moretext-content,
+.itemshop-itemdetails-item-author-name {
+    font-size: 10px;
+    color: #fff;
+    /* padding-top: 5px; */
+    line-height: 20px;
+}
+
+.itemshop-itemdetails-item-author-name {
+    text-decoration: underline;
+}
+
+.itemshop-itemdetails-item-author-name:hover {
+    color: #D3B572;
+}
+
+.itemshop-itemdetails-item-author svg {
+    width: 12px;
+    height: 12px;
+}
+
+.itemshop-itemdetails-item-type {
+    /* outline: 1px solid red; */
+}
+
+.itemshop-itemdetails-item-type-and-author {
+    padding-top: 10px;
+}
+
+.itemshop-itemdetails-type-name {
+    padding-top: 0;
+}
+
+.itemshop-itemdetails-type-name2,
+.itemshop-itemdetails-item-author-name {
+    /* outline: 1px solid red; */
+    padding-left: 5px;
+}
+
+.itemshop-itemdetails-item-author {
+    padding-left: 20px;
+}
+
+.itemshop-itemdetails-conten1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.itemshop-itemdetails-conten2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 加入喜愛追蹤 或 購物車  */
+.itemshop-itemdetails-addorbuy {
+    /* outline: 1px solid red; */
+    padding-left: 115px;
+    padding-top: 20px;
+}
+
+.itemshop-itemdetails-addorbuy a {
+    text-decoration: none;
+}
+
+.itemshop-itemdetails-add,
+.itemshop-itemdetails-buy {
+    width: 105px;
+    /* outline: 1px solid red; */
+    position: relative;
+}
+
+.itemshop-itemdetails-buy {
+    margin-left: 25px;
+}
+
+.itemshop-itemdetails-add-text,
+.itemshop-itemdetails-buy-text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 3px;
+}
+
+.itemshop-itemdetails-buy-text {
+    padding-left: 12px;
+}
+
+.itemshop-itemdetails-add-text i {
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
+.itemshop-itemdetails-buy-text i {
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
+.itemshop-itemdetails-add svg,
+.itemshop-itemdetails-buy svg {
+    width: 102px;
+    height: 16px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+/* 關閉叉叉按鈕 */
+.itemshop-itemdetails-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.itemshop-itemdetails-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+.show {
+    display: block;
+}
+
+
+
+
+/* ---RWD桌機版：1920px--- */
+@media screen and (min-width: 1600px) {
+    .itemshop-itemdetails-wrap {
+        width: 30%;
+        height: 420px;
+    }
+
+    .itemshop-itemdetails-name {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+
+    /* 左邊配件圖和價錢 */
+    .itemshop-itemdetails-item-unit {
+        /* outline: 1px solid red; */
+        margin-top: 25px;
+        padding-left: 25px;
+    }
+
+    .itemshop-itemdetailsm-item-imgwrap {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* 喜愛追蹤 飄入愛心 */
+    .itemshop-itemdetails-follow-heart svg {
+        width: 32px;
+        height: 32px;
+        right: 10px;
+        bottom: -35px;
+    }
+
+    .itemshop-itemdetailsm-item-imgwrap:hover .itemshop-itemdetails-follow-heart svg {
+        bottom: 8px;
+    }
+
+    .itemshop-itemdetails-item-price-gold svg,
+    .itemshop-itemdetails-item-price-free svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .itemshop-itemdetails-item-price-gold-number,
+    .itemshop-itemdetails-item-price-free-number {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    .itemshop-itemdetails-item-price-gold {
+        padding-left: 27px;
+    }
+
+    .itemshop-itemdetails-item-price-free {
+        padding-left: 30px;
+    }
+
+    /* 右邊 配件詳細資訊介紹 */
+    .itemshop-itemdetails-item-unit-info {
+        width: 290px;
+        right: 25px;
+        top: 89px;
+    }
+
+    .itemshop-itemdetails-item-moretext-title {
+        font-size: 14px;
+        padding-top: 20px;
+    }
+
+    .itemshop-itemdetails-item-moretext-content,
+    .itemshop-itemdetails-item-author-name {
+        font-size: 14px;
+        padding-top: 3px;
+        line-height: 25px;
+    }
+
+    .itemshop-itemdetails-item-author svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .itemshop-itemdetails-item-type-and-author {
+        padding-top: 20px;
+    }
+
+    .itemshop-itemdetails-type-name {
+        padding-top: 0;
+    }
+
+    .itemshop-itemdetails-type-name2,
+    .itemshop-itemdetails-item-author-name {
+        /* outline: 1px solid red; */
+        padding-left: 8px;
+        padding-top: 0px;
+    }
+
+    .itemshop-itemdetails-item-author {
+        padding-left: 83px;
+    }
+
+    /* 加入喜愛追蹤 或 購物車  */
+    .itemshop-itemdetails-addorbuy {
+        /* outline: 1px solid red; */
+        padding-left: 258px;
+        padding-top: 0px;
+    }
+
+    .itemshop-itemdetails-add,
+    .itemshop-itemdetails-buy {
+        width: 130px;
+        /* outline: 1px solid red; */
+        position: relative;
+    }
+
+    .itemshop-itemdetails-add-text,
+    .itemshop-itemdetails-buy-text {
+        font-size: 20px;
+        padding-left: 3px;
+    }
+
+    .itemshop-itemdetails-buy-text {
+        padding-left: 18px;
+    }
+
+    .itemshop-itemdetails-add-text i, .itemshop-itemdetails-buy-text i {
+        padding-top: 6px;
+        padding-left: 8px;
+    }
+
+    .itemshop-itemdetails-add svg,
+    .itemshop-itemdetails-buy svg {
+        width: 133px;
+        height: 20px;
+        position: absolute;
+        top: 25px;
+        left: 0;
+    }
+
+
+
+}
+
+
+
+
+
+
+/* ---代幣選擇購買頁（光箱頁）-------------------- */
+.itemshop-choose-coin {
+    /* width: 350vh; */
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 3;
+    display: none;
+}
+
+.itemshop-choose-coin-wrap {
+    width: 95%;
+    height: 300px;
+    background-color: #000;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.itemshop-choose-coin-name {
+    /* outline: 1px solid red; */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 90px;
+}
+
+/* 左邊配件圖和價錢 */
+.itemshop-choose-coin-item-unit {
+    /* outline: 1px solid red; */
+    /* margin-top: 25px;
+    padding-left: 33px; */
+}
+
+.itemshop-choose-coin-item-imgwrap {
+    /* width: 133px;
+    height: 133px;
+    border: 2px solid #667080;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative; */
+}
+
+.itemshop-choose-coin-item-imgwrap img {
+    /* width: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: .5s; */
+}
+
+.itemshop-choose-coin-item-imgwrap:hover img {
+    /* opacity: .5; */
+}
+
+/* 喜愛追蹤 飄入愛心 */
+.itemshop-choose-coin-follow-heart svg {
+    /* width: 20px;
+    height: 20px; */
+    /* outline: 1px solid red; */
+    /* position: absolute;
+    right: 6px;
+    bottom: -20px;
+    transition: .5s; */
+}
+
+.itemshop-choose-coin-item-imgwrap:hover .itemshop-choose-coin-follow-heart svg {
+    /* bottom: 5px; */
+}
+
+.itemshop-choose-coin-item-price {
+    /* outline: 1px solid red; */
+    /* padding-top: 18px; */
+}
+
+.itemshop-choose-coin-item-price-gold svg,
+.itemshop-choose-coin-item-price-free svg {
+    /* width: 16px;
+    height: 16px; */
+}
+
+.itemshop-choose-coin-item-price-gold-number,
+.itemshop-choose-coin-item-price-free-number {
+    /* font-size: 16px;
+    font-weight: 500;
+    color: #D3B572;
+    padding-left: 6px; */
+}
+
+.itemshop-choose-coin-item-price-gold {
+    /* padding-left: 18px; */
+}
+
+.itemshop-choose-coin-item-price-free {
+    /* padding-left: 20px; */
+}
+
+/* 右邊 選擇代幣按鈕 */
+.itemshop-choose-coin-btn-group {
+    /* outline: 1px solid red; */
+    /* position: absolute;
+    top: 106px;
+    right: 33px; */
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.itemshop-choose-coin-btn-group a {
+    text-decoration: none;
+}
+
+.itemshop-choose-coin-btn-gold,
+.itemshop-choose-coin-btn-free {
+    width: 120px;
+    background-color: #fff;
+    border-radius: 3px;
+    color: #D3B572;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.itemshop-choose-coin-btn-gold svg,
+.itemshop-choose-coin-btn-free svg {
+    width: 20px;
+    height: 20px;
+}
+
+.itemshop-choose-coin-btn-gold svg {
+    stroke: #D3B572;
+    fill: #D3B572;
+}
+
+.itemshop-choose-coin-btn-free svg {
+    stroke: #D3B572;
+}
+
+.itemshop-choose-coin-btn-gold span,
+.itemshop-choose-coin-btn-free span {
+    padding-left: 12px;
+}
+
+.itemshop-choose-coin-btn-free {
+    margin-top: 20px;
+}
+
+.itemshop-choose-coin-btn-gold:hover,
+.itemshop-choose-coin-btn-free:hover {
+    background-color: #D3B572;
+    color: #fff;
+}
+
+.itemshop-choose-coin-btn-gold:hover svg {
+    stroke: #fff;
+    fill: #fff;
+}
+
+.itemshop-choose-coin-btn-free:hover svg {
+    stroke: #fff;
+}
+
+
+/* 關閉叉叉按鈕 */
+.itemshop-choose-coin-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.itemshop-choose-coin-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+.itemshop-choose-coin-show {
+    display: block;
+}
+
+
+
+
+/* ---RWD桌機版：1920px--- */
+@media screen and (min-width: 1600px) {
+    .itemshop-choose-coin-wrap {
+        width: 25%;
+        height: 400px;
+    }
+
+    .itemshop-choose-coin-name {
+        font-size: 24px;
+        margin-top: 100px;
+    }
+
+    /* 左邊配件圖和價錢 */
+    .itemshop-choose-coin-item-unit {
+        /* outline: 1px solid red; */
+        /* margin-top: 25px;
+        padding-left: 40px; */
+    }
+
+    .itemshop-choose-coin-item-imgwrap {
+        /* width: 200px;
+        height: 200px; */
+    }
+
+    /* 喜愛追蹤 飄入愛心 */
+    .itemshop-choose-coin-follow-heart svg {
+        /* width: 32px;
+        height: 32px;
+        right: 10px;
+        bottom: -35px; */
+    }
+
+    .itemshop-choose-coin-item-imgwrap:hover .itemshop-choose-coin-follow-heart svg {
+        /* bottom: 8px; */
+    }
+
+    .itemshop-choose-coin-item-price-gold svg,
+    .itemshop-choose-coin-item-price-free svg {
+        /* width: 25px;
+        height: 25px; */
+    }
+
+    .itemshop-choose-coin-item-price-gold-number,
+    .itemshop-choose-coin-item-price-free-number {
+        /* font-size: 20px;
+        padding-left: 10px; */
+    }
+
+    .itemshop-choose-coin-item-price-gold {
+        /* padding-left: 27px; */
+    }
+
+    .itemshop-choose-coin-item-price-free {
+        /* padding-left: 30px; */
+    }
+
+    /* 右邊 選擇代幣按鈕 */
+    .itemshop-choose-coin-btn-group {
+        /* position: absolute;
+        top: 140px;
+        right: 40px; */
+    }
+
+    .itemshop-choose-coin-btn-gold,
+    .itemshop-choose-coin-btn-free {
+        width: 160px;
+        font-size: 20px;
+        padding: 11px 18px;
+        margin-top: 40px;
+    }
+
+    .itemshop-choose-coin-btn-gold svg,
+    .itemshop-choose-coin-btn-free svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .itemshop-choose-coin-btn-gold span,
+    .itemshop-choose-coin-btn-free span {
+        padding-left: 15px;
+    }
+
+    .itemshop-choose-coin-btn-free {
+        /* margin-top: 25px; */
+    }
+}
+
+
+
+
+
+
+
+
+/* ---代幣商店頁 登入獎勵光箱頁---------------------- */
+.mission-login {
+    /* width: 350vh; */
+    width: 100vw;
+    height: 150vh;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 3;
+    /* outline: 1px solid red; */
+    display: none;
+}
+
+.mission-login-wrap {
+    width: 95%;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.mission-login-name {
+    /* outline: 1px solid red; */
+    color: #000;
+    margin-top: 35px;
+}
+
+.mission-login-name p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mission-login-text {
+    /* outline: 1px solid red; */
+    font-size: 14px;
+    color: #667080;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    line-height: 30px;
+}
+
+.complete-login {
+    display: none;
+}
+
+/* 按鈕 */
+
+.checkout {
+    height: auto;
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+.checkout button {
+    border: 0;
+    margin-top: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 13px 24px;
+    background-color: #D3B572;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 8px 24px;
+}
+
+.checkout button:hover {
+    background-color: #667080;
+}
+
+.mission-login-show {
+    display: block;
+}
+
+.complete-login-show {
+    display: block;
+}
+
+
+
+/* 關閉叉叉按鈕 */
+/* .mission-login-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.mission-login-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+.hide {
+    display: none;
+} */
+
+
+
+
+/* ---RWD桌機版：1920px--- */
+@media screen and (min-width: 1600px) {
+    .mission-login-wrap {
+        /* outline: 1px solid red; */
+        width: 25%;
+        height: 300px;
+    }
+
+    .mission-login-name p {
+        font-size: 24px;
+        margin-bottom: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .mission-login-text {
+        /* outline: 1px solid red; */
+        font-size: 16px;
+        padding-top: 40px;
+    }
+
+
+    .checkout button {
+        margin-top: 50px;
+    }
+
+
+
+}
+
+
+
+
+
+
+

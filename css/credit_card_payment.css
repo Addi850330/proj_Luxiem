@@ -1,0 +1,610 @@
+
+/* 通常的清除預設樣式 */
+
+*{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style:none
+}
+img{
+    vertical-align:top;
+    border:none
+}
+
+
+body {
+    background-color: black !important;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size:14px;
+    color:white !important;
+    margin: 0px;
+}
+ 
+.container_pc {
+  width: 800px;
+  margin: 0 auto;
+} 
+
+/* token store PC */
+
+.token_store_title{
+  display: flex;
+  align-items: flex-end;
+  padding-top:100px;
+}
+.token_store_title .main_title{
+  font-family: 'Kaisei Opti', serif;
+  color: #D3B572;
+  font-size: 24px;
+}
+.sub_title{
+  font-family: 'Noto Sans TC', sans-serif;
+  color: white;
+  font-size: 16px;
+  margin-left: 20px; 
+}
+
+/* duo button */
+
+.container_duo_button {
+  width: 180px;
+  display: flex;
+  position: relative;
+  padding-left: 30px;
+  /* margin-bottom: 12px;  */
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}  
+
+/* Hide the browser's default radio button */
+.container_duo_button input {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  border: #D3B572 1px solid;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+/* .container_duo_button:hover input ~ .checkmark {
+    background-color: #D3B572;
+} */
+
+/* When the radio button is checked, add a blue background */
+.container_duo_button input:checked ~ .checkmark {
+    background-color: black;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container_duo_button input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container_duo_button .checkmark:after {
+ 	top: 5px;
+	left: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #D3B572;
+}
+
+
+.duo_button_wrap{
+    width: 100%;
+    margin-top:20px;
+    display:flex;
+}
+
+
+/* credit card */
+
+
+/* body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+   background-image: linear-gradient(to right top, #a2beeb, #8ecfee, #8edde5, #a4e7d5, #c7eec7);
+  flex-direction: column;
+  -webkit-flex-direction: column;
+} */
+
+.credit_card{
+    margin-top: 20px;
+    width: 320px;
+    height: 190px;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    perspective:600px;
+}
+
+
+.card__part{
+  box-shadow: 1px 1px #D3B572;  
+  top: 0;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  display: inline-block;
+    width: 320px;
+    height: 190px;
+    background-image: linear-gradient(to top,  black  0%, #D3B572 110%);
+    /* background-image: url('img/背景.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  */
+    border-radius: 8px;
+   
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+/* .card__front{
+    padding: 18px;
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+} */
+.card__front{
+  padding: 18px;
+  transform: rotateY(0);
+  transform: rotateY(0);
+}
+
+
+/* .card__back {
+    padding: 18px 0;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+} */
+
+.card__back {
+  padding: 18px 0;
+  transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.card__black-line {
+    margin-top: 5px;
+    height: 38px;
+    background-color: #303030;
+}
+
+.card__logo {
+    height: 24px;
+}
+
+.card__front-logo{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+}
+.card__square {
+    border-radius: 5px;
+    height: 30px;
+}
+
+.card_numer {
+    display: block;
+    width: 100%;
+    word-spacing: 4px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color:white;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card__space-75 {
+    width: 75%;
+    float: left;
+}
+
+.card__space-25 {
+    width: 25%;
+    float: left;
+}
+
+.card__label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color:white;
+    letter-spacing: 1px;
+}
+
+.card__info {
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 18px;
+    color:white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card__back-content {
+    padding: 15px 15px 0;
+}
+.card__secret--last {
+    color: #303030;
+    text-align: right;
+    margin: 0;
+    font-size: 14px;
+}
+
+.card__secret {
+    padding: 5px 12px;
+    background-color: #fff;
+    position:relative;
+}
+
+.card__secret:before{
+    content:'';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    height: calc(100% + 6px);
+    width: calc(100% - 42px);
+    border-radius: 4px;
+    background: repeating-linear-gradient(45deg, #ededed, #ededed 5px, #f9f9f9 5px, #f9f9f9 10px);
+}
+
+.card__back-logo {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.card__back-square {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+/* .card:hover .card__front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+
+} */
+
+.credit_card:hover .card__front {
+  transform: rotateY(180deg);
+  transform: rotateY(180deg);
+
+}
+
+/* .card:hover .card__back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+} */
+
+.credit_card:hover .card__back {
+  transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+/* credit card info pc  */
+
+.creditcard_info {
+    width:456px;
+    /* border: 1px solid red; */
+    padding-top: 50px;
+}
+
+.creditcard_info input{
+    color: white;
+}
+
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  background-color: black;
+  border: 1px solid #D3B572;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.duo_info{
+    display: flex;
+}
+
+.duo_info div{
+    width:50%;
+}
+
+::placeholder { /* CSS 3 標準 */
+color:#D3B572;
+}
+
+::-webkit-input-placeholder { /* Chrome, Safari */
+color:#D3B572;
+}
+
+:-ms-input-placeholder { /* IE 10+ */color:#D3B572;
+}
+
+::-moz-placeholder { /* Firefox 19+ */color:#D3B572;
+opacity: 1;
+}
+
+.duo_info_right{
+    margin-left:15px;
+}
+
+/* checkout button */
+.checkout{
+  width:456px;
+  margin-right:50px;
+  height: 68px;
+}
+.checkout button {
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 13px 24px;
+  background-color: #D3B572;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.checkout button:hover {
+  background-color:#667080;
+} 
+
+
+/* RWD *//* RWD */
+/* RWD *//* RWD */
+/* RWD *//* RWD */
+/* RWD *//* RWD */
+/* RWD *//* RWD */
+/* RWD *//* RWD */
+
+
+@media screen and (min-width: 376px){
+    .container_mobile{
+      display:none;
+    }
+  }
+@media screen and (max-width: 375px){
+    .container_pc{
+      display:none;
+    }
+
+    .desktop-footer{
+      display: none;
+    }
+    .container_mobile{
+    width: 327px;
+    margin-left: 24px;
+}
+
+.token_store_title{
+  display: flex;
+  align-items: flex-end;
+  padding-top:50px;
+}
+
+    /* duo button */
+  
+.container_duo_button {
+  width: 180px;
+  display: flex;
+  position: relative;
+  padding-left: 30px;
+  /* margin-bottom: 12px;  */
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}  
+
+/* Hide the browser's default radio button */
+.container_duo_button input {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  border: #D3B572 1px solid;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+/* .container_duo_button:hover input ~ .checkmark {
+    background-color: #D3B572;
+} */
+
+/* When the radio button is checked, add a blue background */
+.container_duo_button input:checked ~ .checkmark {
+    background-color: black;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container_duo_button input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container_duo_button .checkmark:after {
+ 	top: 5px;
+	left: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #D3B572;
+}
+
+
+.duo_button_wrap{
+    width: 100%;
+    margin-top:20px;
+    display:flex;
+}
+
+/* credit card */
+
+.card__part{
+  box-shadow: 1px 1px #D3B572;  
+  top: 0;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  display: inline-block;
+    width: 270px;
+    height: 170px;
+    background-image: linear-gradient(to top,  black  0%, #D3B572 110%);
+    /* background-image: url('img/背景.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  */
+    border-radius: 8px;
+   
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+/* credit card info mobile  */
+
+.creditcard_info {
+    width:306px;
+    padding-top: 40px;
+}
+
+.creditcard_info input{
+    color: white;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  /* color: #D3B572; */
+  background-color: black;
+  border: 1px solid #D3B572;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+
+.duo_info{
+    display: flex;
+}
+
+.duo_info div{
+    width:50%;
+}
+
+::placeholder { /* CSS 3 標準 */
+color:#D3B572;
+}
+
+::-webkit-input-placeholder { /* Chrome, Safari */
+color:#D3B572;
+}
+
+:-ms-input-placeholder { /* IE 10+ */color:#D3B572;
+}
+
+::-moz-placeholder { /* Firefox 19+ */color:#D3B572;
+opacity: 1;
+}
+
+.duo_info_right{
+    margin-left:15px;
+}
+
+.creditcard_info {
+  width:306px;
+  padding-top: 20px;
+}
+
+
+/* checkout button */
+.checkout{
+  width:94%;
+  margin-right:50px;
+  height: 68px;
+}
+.checkout button {
+
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 13px 24px;
+  background-color: #D3B572;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.checkout button:hover {
+  background-color:#667080;
+} 
+
+
+
+}

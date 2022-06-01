@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員系統-持有配件 分享至其他社群? 光箱測試版</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+    <!-- 連結主要的css檔 -->
+    <!-- <link rel="stylesheet" href="./css/Vtuber_main.css"> -->
+
+    <style>
+        .member-item-share {
+            /* width: 350vh; */
+            width: 100vw;
+            height: 150vh;
+            position: fixed;
+            background-color: rgb(0, 0, 0, 0.3);
+            z-index: 3;
+            /* outline: 1px solid red; */
+        }
+
+        .member-item-share-wrap {
+            width: 95%;
+            height: 280px;
+            background-color: #fff;
+            border-radius: 5px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        .member-item-share-name {
+            /* outline: 1px solid red; */
+            color: #000;
+            margin-top: 35px;
+        }
+
+        .member-item-share-name p {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .member-item-share-text {
+            /* outline: 1px solid red; */
+            font-size: 14px;
+            color: #667080;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 35px;
+            line-height: 25px;
+        }
+
+        /* 社群icon */
+        .member-item-share-main {
+            /* outline: 1px solid red; */
+            padding-top: 35px;
+        }
+        .member-item-share-main a {
+            text-decoration: none;
+            /* outline: 1px solid red; */
+            height: 30px;
+        }
+        .member-item-share-main svg {
+            width: 30px;
+            height: 30px;
+            margin-left: 35px;
+            margin-right: 35px;
+        }
+
+
+
+        /* 關閉叉叉按鈕 */
+        .member-item-share-close {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .member-item-share-close svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+
+
+
+        /* ---RWD桌機版：1920px--- */
+        @media screen and (min-width: 1600px) {
+            .member-item-share-wrap {
+                /* outline: 1px solid red; */
+                width: 25%;
+                height: 300px;
+            }
+
+            .member-item-share-name p {
+                font-size: 24px;
+                margin-bottom: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .member-item-share-text {
+                /* outline: 1px solid red; */
+                font-size: 16px;
+                padding-top: 50px;
+            }
+
+
+            .checkout button {
+                margin-top: 50px;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="member-item-share">
+        <div class="member-item-share-wrap">
+            <div class="member-item-share-name d-flex justify-content-center align-items-center">
+                <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15.3928 3.91666H31.6078L43.0837 15.3925V31.6075L31.6078 43.0833H15.3928L3.91699 31.6075V15.3925L15.3928 3.91666Z"
+                        stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M23.5 15.6667V23.5" stroke="#D3B572" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M23.5 31.3333H23.5196" stroke="#D3B572" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <p>提示訊息</p>
+            </div>
+
+            <div class="member-item-share-text">
+                分享至
+            </div>
+
+            <div class="member-item-share-main">
+                <!-- 社群icon -->
+                <a href="#">
+                    <svg viewBox="0 0 44 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M31.3333 22V12.6667M43 1H1V38.3333H12.6667V47.6667L22 38.3333H33.6667L43 29V1ZM19.6667 22V12.6667V22Z"
+                            stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+
+                <a href="#">
+                    <svg viewBox="0 0 53 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M51.4167 1.02304C49.2221 2.57101 46.7923 3.75496 44.2208 4.52929C42.8407 2.94234 41.0064 1.81755 38.9661 1.30704C36.9258 0.796537 34.778 0.924951 32.8131 1.67492C30.8482 2.42488 29.161 3.76021 27.9797 5.50031C26.7985 7.24041 26.1801 9.30131 26.2083 11.4043V13.696C22.181 13.8004 18.1904 12.9072 14.5919 11.0959C10.9934 9.28468 7.89864 6.61158 5.58333 3.31471C5.58333 3.31471 -3.58333 23.9397 17.0417 33.1064C12.322 36.3101 6.69973 37.9164 1 37.6897C21.625 49.148 46.8333 37.6897 46.8333 11.3355C46.8312 10.6972 46.7698 10.0604 46.65 9.43346C48.9889 7.12688 50.6394 4.21468 51.4167 1.02304V1.02304Z"
+                            stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+
+            </div>
+
+
+
+            <!-- 關閉叉叉按鈕 -->
+            <div class="member-item-share-close">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.5 8.5L8.5 25.5" stroke="#667080" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M8.5 8.5L25.5 25.5" stroke="#667080" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.2.1-dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        $('.member-item-share-close').click(function () {
+            console.log('hi');
+            $('.member-item-share').addClass('hide');
+        })
+    </script>
+
+</body>
+
+</html>

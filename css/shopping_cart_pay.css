@@ -1,0 +1,161 @@
+/* token held */
+
+.tokenholding{
+  background-color:hsla(41, 53%, 64%, 0.5);
+  width: 1140px;
+  height:50px;
+  display:flex;
+  justify-content:end;
+  margin-right:65px;
+  margin-top:35px;
+}
+
+.tokenholding div{
+  font-family: 'Noto Sans TC', sans-serif;
+  /* border:red 1px solid; */
+  display:flex;
+  align-items:center;
+  font-size:24px;
+  color: white;
+  padding: 5px 20px;
+}
+
+.tokenholding p{
+  margin:0 0 0 5px;
+}
+
+#cart-total{
+  display: flex;
+  align-items: center;
+}
+
+.far_right_space{
+  width:12px;
+}
+
+
+@media screen and (min-width: 376px){
+    .container_mobile{
+      display:none;
+    }
+  }
+@media screen and (max-width: 375px){
+
+   /* checkout button */
+
+   .checkout{
+      width: 327px;
+      margin-right: 0;
+      display: flex;
+      justify-content: space-between;  
+    }
+    .checkout button {
+      font-family: 'Noto Sans TC', sans-serif;
+      height: auto;
+      border: 0;
+      margin-top: 20px;
+      margin-left: 10px;
+      padding: 13px 0;
+      background-color: #D3B572;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 6px;
+      width: 100px;
+    }
+
+    .checkout button:hover {
+    background-color:#667080;
+    } 
+
+    .recommendation-title{
+      margin-top:20px;
+    }
+    .main-title{
+      font-size: 16px;
+      color:white;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    
+    .card_wrap{
+      width: 90%;
+      margin-top:20px;
+      padding-left: 0px;
+      height:213px;
+      display: flex;
+      justify-content: space-between;
+      /* border: red 1px solid; */
+
+    }
+    .card{
+      height:213px;
+      width:100px;
+      /* border: red 1px solid; */
+    }
+    
+    .arrow{
+      height:213px;
+      font-size:16px;
+      color:#D3B572;
+      display: flex;
+      align-items: center;
+    }
+    .checkout_buy{
+      /* border:red 1px solid; */
+      width: 327px;
+      margin-left:20px;
+      margin-bottom:20px;
+      margin-right: 0;
+      display: flex;
+      justify-content:space-between;
+    }
+    .checkout_buy button {
+      flex-grow:1;
+      font-family: 'Noto Sans TC', sans-serif;
+      height: auto;
+      border: 0;
+      margin-top: 20px;
+      padding: 13px 0;
+      background-color: #D3B572;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 6px;
+      /* width: 100px; */
+    }
+
+    .checkout button:hover {
+    background-color:#667080;
+    } 
+
+    .checkout_buy > .button_right {
+      margin-left:20px;
+    }
+
+  
+    .tokenholding{
+    background-color:hsla(41, 53%, 64%, 0.5);
+    width: 330px;
+    height:50px;
+    display:flex;
+    justify-content:end;
+    /* margin-right:10px; */
+    margin-top:20px;
+    margin-left:20px;
+    }
+
+    .tokenholding div{
+      font-family: 'Noto Sans TC', sans-serif;
+      /* border:red 1px solid; */
+      font-size:14px;
+      color: white;
+      padding: 5px 5px;
+    }
+
+    .far_right_space{
+      width:0px;
+    }
+
+    .tokenholding i{
+      color:#D3B572;
+      margin-right:5px
+    }
+}

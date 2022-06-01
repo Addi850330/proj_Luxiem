@@ -1,0 +1,59 @@
+@media screen and (min-width: 1920px){
+.mc-bg{
+    overflow: hidden;
+    }
+.mc-bg .container{
+    width: 55%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    margin-right: 0;
+    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+.mc-bg .container form{
+    width: 50%;
+}
+.mc-logo{
+    display: none;
+}
+.mc-link .sign-in{
+    border-bottom: solid 1px #D3B572;
+    padding: 10px 70px;
+    font-size: 24px;
+}
+.mc-link .sign-up{
+    border-bottom: solid 3px #D3B572;
+    padding: 10px 70px;
+    font-size: 24px;
+}
+.container form .sign-up-text{
+    margin-top: 20px;
+    font-size: 18px;
+}
+.sign-up-btn{
+    margin-top: 42px;
+}
+.Icon-inside input{
+    height: 55px;
+}
+.mc-btn{
+    height: 55px;
+}
+.sing-in-img{
+    display: block;
+}
+.small-polygon{
+    width: 75px;
+    right: 13%;
+    top: 82%;
+}
+.big-polygon{
+    width: 100px;
+    right: 14%;
+    top: 78%;
+}
+}
+@media screen and (max-width: 1920px){
+    .sign-in-footer{
+        display: none;
+    }
+    }

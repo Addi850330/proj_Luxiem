@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.mc-bg{
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    /* overflow: hidden; */
+}
+.container{
+    width: 100%;
+    background: linear-gradient(#ffffff, #D3B572);
+    height: 100vh;
+    padding-top: 20%;
+    /* 這裡調整高度 */
+    padding-bottom: 20px;
+}
+.mc-logo-around{
+    overflow: hidden;
+    /* background-image: url(../190911-21005-01-bIL1w.jpg); */
+    clip-path: circle(50% at 50% 50%);
+}
+/* 警告這不是背景-寫入頭貼的設定需要再修改 */
+.mc-logo{
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+.mc-bg .container form .mc-link{
+    margin: auto;
+}
+.container form div{
+    width: 100%;
+    
+}
+.container form p{
+    text-align: start;
+    color: #000000;
+    font-size: 16px;
+}
+.sign-up-text{
+    margin-bottom: 12px;
+    margin-top: 4px;
+}
+.sign-up-btn{
+    margin-top: 24px;
+    padding-bottom: 20px;
+}
+.container form .sign-up-text-hint{
+    padding-top: 4px;
+    font-size: 12px;
+    margin-bottom: 0px;
+    color: #d3b47200;
+}
+.Icon-inside input{
+    width: 100%;
+    height: 40px;
+    border: #000000;
+    border-bottom:  1px solid #000000;
+    padding-left: 35px;
+    background-color: #00000000;
+}
+input::-webkit-input-placeholder{
+    color: #000000;
+    font-size: 16px;
+}
+.Icon-inside {
+    position:relative;
+   }
+.Icon-inside i{
+    position:absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+   }
+.mc-btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    border:  1px solid #D3B572;
+    color: #ffffff;
+    background-color: #D3B572;
+}
+/* -------------------------------- */
+.sign-in-footer{
+    text-align: center;
+    position: relative;
+    align-items: center;
+    margin-top: 15%;
+}   
+.sign-in-footer::before{
+    display: block;
+    content: "";
+    width: 470px;
+    height: 1px;
+    background-color: #000000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sign-in-footer::after{
+    display: block;
+    content: "";
+    width: 470px;
+    height: 1px;
+    background-color: #000000;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sign-in-footer p{
+    color: #000000;
+}
+.sign-in-footer p a{
+    color: #000000;
+}
+.side_nav_wrap{
+    display: none;
+}

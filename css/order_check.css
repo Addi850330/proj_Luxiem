@@ -1,0 +1,401 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.mc-bg{
+    /* height: 100vh; */
+    background-color: black;
+    position: relative;
+    /* overflow: hidden; */
+}
+.container{
+    width: 100%;
+    background: linear-gradient(#ffffff, #D3B572);
+    /* height: 100vh; */
+    padding-top: 25%;
+    /* 這裡調整高度 */
+    padding-bottom: 20px;
+}
+.try-design{
+    background-color: #ffffff9c;
+    padding-top: 40px;
+    border-radius: 8px;
+    position: relative;
+    /* outline: 1px solid red; */
+}
+.try-design::after{
+    content:"訂單查詢";
+    font-weight: 500; 
+    text-align: center;
+    line-height: 30px;
+    color: #D3B572;
+    background-color: rgb(0, 0, 0);
+    width: 110px;
+    height: 34px;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+}
+.try-design::before{
+    content:"";
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid black;
+    width: 110px;
+    height: 34px;
+    position: absolute;
+    top: -10px;
+    left: 0px;
+}
+
+/* 下拉式篩選器 */
+.item-follow-select-wrap {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 23%;
+    /* outline: 1px solid red; */
+    border-bottom: 1px solid #D3B572;
+}
+.dropdown-menu {
+    min-width: 0rem
+}
+.dropdown-item {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.item-follow-select a {
+    color: #667080;
+    font-size: 12px;
+}
+.item-follow-select:hover a {
+    color: #D3B572;
+}
+.item-follow-select-list a {
+    font-size: 12px;
+}
+
+/* 訂單表單 order_table */
+
+.order_table{
+    text-align: center;
+    height: 700px;
+}
+
+.order_table thead{
+    color:black;
+    font-size: 14px;
+}
+
+.order_table td{
+    color:black;
+    font-size: 12px;
+}
+
+.order_content .order_content_middle{
+    text-align: left;
+}
+.order_content .order_content_middle span{
+    color: #D3B572;
+}
+.order_content p{
+    margin-bottom:2px;
+    font-size: 12px;
+}
+
+.order_content tr{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+table { 
+	border-collapse: collapse; 
+	margin:20px auto;
+	}
+
+td, th { 
+    padding: 10px; 
+    text-align: center; 
+    width: 33.33%;
+    }
+
+
+.hold-item-img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #667080;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.hold-item-img img {
+    width:100%;
+} 
+
+
+.labels tr td {
+    color: black;
+}
+
+
+[data-toggle="toggle"] {
+	display: none;
+    
+}
+
+/* 沿用持有配件頁的頁碼 hold-item-page */
+.hold-item-page{
+    justify-content: center;
+}
+.hold-item-page-btn{
+    width: 20px;
+    height: 25px;
+    color: rgb(0, 0, 0);
+    background-color: #d3b47200;
+    border: 1px solid #d3b47200;
+    border-radius: 2px;
+    font-size: 12px;
+    vertical-align: middle;
+    font-weight: 600;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 15px;
+}
+
+/* 頁碼 資料寫入2 */
+.item-follow-page {
+    /* outline: 1px solid red; */
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+.item-follow-page i {
+    /* color: #D3B572; */
+    color: #000;
+    width: 20px;
+    height: 20px;
+    padding: 5px 9px;
+}
+.item-follow-page a {
+    font-size: 14px;
+    color: #000;
+    padding: 0 9px;
+}
+
+
+/* -------------------------------- */
+.sign-in-footer{
+    text-align: center;
+    position: relative;
+    align-items: center;
+    margin-top: 15%;
+}   
+.sign-in-footer::before{
+    display: block;
+    content: "";
+    width: 470px;
+    height: 2px;
+    background-color: #D3B572;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sign-in-footer::after{
+    display: block;
+    content: "";
+    width: 470px;
+    height: 2px;
+    background-color: #D3B572;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sign-in-footer p{
+    color: #D3B572;
+}
+.sign-in-footer p a{
+    color: #D3B572;
+}
+/* 1920---- */
+.sing-in-img{
+    position: absolute;
+    top: 0px;
+    display: none;
+}
+.luxiem-logo{
+    margin-left: 50%;
+    margin-top: 25%;
+}
+.sign-in-logo{
+    margin-left: 60%;
+    margin-top: 40px;
+}
+.sign-in-text{
+    width: 270px;
+    margin-left: 83%;
+    margin-top: 10px;
+    color: #D3B572;
+}
+.sign-in-text h3{
+    font-weight: 700;
+    font-size: 48px;
+}
+.sign-in-img div{
+    position: absolute
+}
+.sign-in-img div img{
+    width: 100%;
+}
+.sign-in-img1{
+    width: 528px;
+    position: absolute;
+    left:75%;
+    top: 115%;
+}
+.sign-in-img2{
+    width: 190px;
+    position: absolute;
+    left: 75%;
+    top:165%;
+    animation: rolls 3s linear infinite;
+}
+@keyframes roll3{
+	0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+	100% { transform: rotate(0deg); }
+}
+.side_nav_wrap{
+    display: none;
+}
+/* ---RWD桌機版：1920px--- */
+@media screen and (min-width: 1920px){
+
+.mc-bg{
+    /* height: 100vh; */
+    background-color: black;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.container{
+    max-width: 1200px;
+    margin-right: 0;
+    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+    position: relative;
+    /* 調整內容物高度 */
+    padding-top: 5%;
+}
+.try-design{
+    width: 640px;
+    margin-left: 20%
+}
+
+/* side vertical navbar */
+
+.side_nav_wrap{
+    position: absolute;
+    top: 96px;
+    left: 400px;
+    height: 80%;
+    display: block;
+}
+.side_nav_upper{
+    position: relative
+}
+.side_nav_down{
+    position: relative
+}
+
+.vertical_line{
+    position: absolute;
+    top: 16px;
+    left: 8px;
+}
+
+.side.nav{
+    display:flex;
+}
+
+.side_nav_ticket{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.hex_icon {
+    margin-right:30px;
+    margin-bottom:1px;
+
+}
+
+.side_nav_text {
+    width: 170px; 
+    position: relative;
+    display:inline-block;
+    padding: 8px 24px;
+    border: 0; margin-bottom: 15px;
+    background: transparent;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.side_nav_text::before {
+    content: ''; /* To generate the box */
+    position: absolute;
+    top: 0; right:0 ; bottom: 0; left:0 ;
+    z-index: 2;
+    border: #D3B572 1px solid;
+    transform: skew(-25deg);
+} 
+.side_nav_ticket:hover .side_nav_text::before{
+    background: linear-gradient(#ffffff00, #D3B572);
+}
+.side_nav_ticket:hover .h1{
+    color: #ffffff;
+}
+.side_nav_ticket:nth-child(3) .side_nav_text::before{
+    background: linear-gradient(#ffffff00, #D3B572);
+}
+.side_nav_ticket:nth-child(3) .h1{
+    color: #ffffff;
+}
+  .h1 {
+    font-size: 20px;
+    /* padding: 8px 24px; */
+    margin: 30px 0;
+    text-transform: uppercase;
+    color: #D3B572;
+  }
+
+/* news wrap */
+
+.news_wrap{
+    margin-top:40px;
+    display: flex;
+}
+
+.news_wrap_left_deco{
+    position: absolute;
+    left:-37px;
+}
+
+.news_img_wrap{
+    border:#D3B572 1px solid;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.news_img_wrap img{
+    width: 100%;;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+}
+
+@media screen and (max-width: 1920px){
+    .sign-in-footer{
+        display: none;
+    }
+    }

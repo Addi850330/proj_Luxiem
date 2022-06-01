@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配件購物車頁-已加入喜好收藏 光箱測試版</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+    <!-- 連結主要的css檔 -->
+    <!-- <link rel="stylesheet" href="./css/Vtuber_main.css"> -->
+
+    <style>
+        .add-to-fllow {
+            /* width: 350vh; */
+            width: 100vw;
+            height: 150vh;
+            position: fixed;
+            background-color: rgb(0, 0, 0, 0.3);
+            z-index: 3;
+            /* outline: 1px solid red; */
+        }
+
+        .add-to-fllow-wrap {
+            width: 95%;
+            height: 190px;
+            background-color: #fff;
+            border-radius: 5px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        .add-to-fllow-name {
+            /* outline: 1px solid red; */
+            color: #000;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 35px;
+        }
+
+        /* 按鈕 */
+
+        .checkout {
+            height: auto;
+            /* outline: 1px solid red; */
+            display: flex;
+            justify-content: center;
+        }
+
+        .checkout button {
+            border: 0;
+            margin-top: 35px;
+            margin-left: 15px;
+            margin-right: 15px;
+            padding: 13px 24px;
+            background-color: #D3B572;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 6px;
+            padding: 8px 24px;
+        }
+
+        .checkout button:hover {
+            background-color: #667080;
+        }
+
+
+
+        /* 關閉叉叉按鈕 */
+        .add-to-fllow-close {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .add-to-fllow-close svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+
+
+
+        /* ---RWD桌機版：1920px--- */
+        @media screen and (min-width: 1600px) {
+            .add-to-fllow-wrap {
+                /* outline: 1px solid red; */
+                width: 25%;
+                height: 250px;
+            }
+
+            .add-to-fllow-name {
+                font-size: 24px;
+                margin-top: 40px;
+            }
+
+            .checkout button {
+                margin-top: 50px;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="add-to-fllow">
+        <div class="add-to-fllow-wrap">
+            <div class="add-to-fllow-name">已加入喜好收藏</div>
+
+            <div class="add-to-fllow-main">
+
+                <!-- 按鈕 -->
+                <div class="add-to-fllow-btn">
+                    <div class="checkout">
+                        <button class="">我的收藏</button>
+                        <button class="">確定</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- 關閉叉叉按鈕 -->
+            <div class="add-to-fllow-close">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.5 8.5L8.5 25.5" stroke="#667080" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M8.5 8.5L25.5 25.5" stroke="#667080" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.2.1-dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        $('.add-to-fllow-close').click(function () {
+            console.log('hi');
+            $('.add-to-fllow').addClass('hide');
+        })
+    </script>
+
+</body>
+
+</html>

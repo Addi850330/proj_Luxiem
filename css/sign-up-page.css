@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+nav{
+    z-index: 4;
+}
+.mobile-menu{
+    z-index: 3;
+}
+.nav__listitemdrop{
+    z-index: 2;
+}
+.mc-bg{
+    height: 100vh;
+    background: linear-gradient(#ffffff, #D3B572);
+    position: relative;
+    /* overflow: hidden; */
+}
+.container{
+    width: 100%;
+    background-color: black;
+    padding-top: 15%;
+    /* 這裡調整高度 */
+}
+.mc-bg .container form{
+    position: relative;
+    width: 90%;
+    background: rgba(0, 0, 0, 0);
+    text-align: center;
+    margin: auto;
+    z-index: 2;
+}
+.container form i{
+    color: #D3B572;
+}
+.mc-link .sign-in{
+    border-bottom: solid 0.5px #D3B572;
+    padding: 10px 30px;
+    font-weight: 700;
+}
+.mc-link .sign-up{
+    border-bottom: solid 2px #D3B572;
+    padding: 10px 30px;
+    font-weight: 700;
+}
+.mc-link a{
+    color: #D3B572;
+}
+.mc-bg .container form .mc-link{
+    margin: auto;
+}
+.container form div{
+    width: 100%;
+    
+}
+.container form p{
+    text-align: start;
+    color: #D3B572;
+    font-size: 16px;
+}
+.container form p span{
+    color: red;
+}
+.sign-up-text{
+    margin-bottom: 0px;
+    margin-top: 4px;
+}
+.sign-up-btn{
+    margin-top: 24px;
+    padding-bottom: 20px;
+}
+.container form .sign-up-text-hint{
+    padding-top: 4px;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+.Icon-inside input{
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    border:  1px solid #D3B572;
+    padding-left: 35px;
+}
+input::-webkit-input-placeholder{
+    color: #D3B572;
+    font-size: 16px;
+}
+.Icon-inside {
+    position:relative;
+   }
+.Icon-inside i{
+    position:absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+   }
+.mc-btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    border:  1px solid #D3B572;
+    color: #ffffff;
+    background-color: #D3B572;
+    transition: .3s;
+}
+.mc-btn:hover{
+    color: #D3B572;
+    background-color: #000000;
+}
+.small-polygon{
+    position: absolute;
+    right: 10%;
+    top: 80%;
+    animation: roll 10s linear infinite;
+    z-index: 0;
+}
+.big-polygon{
+    position: absolute;
+    right: 15%;
+    top: 77%;
+    animation: roll2 10s linear infinite;
+    z-index: 0;
+}
+@keyframes roll{
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+@keyframes roll2{
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+.sign-in-footer{
+    text-align: center;
+    position: relative;
+    align-items: center;
+    margin-top: 15%;
+}   
+.sign-in-footer::before{
+    display: block;
+    content: "";
+    width: 470px;
+    height: 2px;
+    background-color: #D3B572;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sign-in-footer::after{
+    display: block;
+    content: "";
+    width: 470px;
+    height: 2px;
+    background-color: #D3B572;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sign-in-footer p{
+    color: #D3B572;
+}
+.sign-in-footer p a{
+    color: #D3B572;
+}
+/* 1920---- */
+.sing-in-img{
+    position: absolute;
+    top: 0px;
+    display: none;
+}
+.luxiem-logo{
+    margin-left: 50%;
+    margin-top: 25%;
+}
+.sign-in-logo{
+    margin-left: 60%;
+    margin-top: 40px;
+}
+.sign-in-text{
+    width: 270px;
+    margin-left: 83%;
+    margin-top: 10px;
+    color: #D3B572;
+}
+.sign-in-text h3{
+    font-weight: 700;
+    font-size: 48px;
+}
+.sign-in-img div{
+    position: absolute
+}
+.sign-in-img div img{
+    width: 100%;
+}
+.sign-in-img1{
+    width: 528px;
+    position: absolute;
+    left:75%;
+    top: 115%;
+}
+.sign-in-img2{
+    width: 190px;
+    position: absolute;
+    left: 75%;
+    top:165%;
+    animation: roll3 3s linear infinite;
+}
+@keyframes roll3{
+	0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+	100% { transform: rotate(0deg); }
+}

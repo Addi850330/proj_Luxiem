@@ -1,0 +1,380 @@
+/* sub header */
+
+*,
+*:before
+*:after {
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black !important;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* ---手機版  375px--- */
+
+/*---- header ----*/
+
+.site-header-mobile {
+  background:rgba(0, 0, 0, 0.8);
+  color: #fff;
+  position: fixed;
+  left: 20%;
+  /* site-header all hiden */
+  transform: translateY(-100%);
+  /* width: 100%; */
+  z-index: 100;
+}
+
+#ike-icon,
+#vox-icon,
+#mysta-icon,
+#luca-icon{
+  position:relative;
+  z-index: 120;
+}
+    
+.site-nav:before,
+.site-nav:after {
+  content: '';
+  display: table;
+}
+
+.site-nav:after {
+  clear: both;
+}
+
+/* pc version noshow */
+.site-header{
+  display: none;
+}
+/* pc version noshow */
+
+
+.site-header-mobile, .header-toggle-mobile{
+  transition: .3s all;
+}
+
+.site-boundary {
+  /* margin: 0 auto; */
+  max-width: 380px;
+  padding: 0 15px;
+  position: relative;
+}
+
+/* .stream-video-container{
+  position: fixed;
+  width: 100%;
+} */
+
+.site-header-mobile.active {
+  /* site-header all show */
+  transform: translateY(0);
+}
+
+.site-nav {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.site-header-profile-wrap {
+  display: block;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  z-index: 1;
+}
+
+.site-header-profile-wrap img{
+  z-index: 100;
+}
+
+.site-nav img{
+  border: #D3B572 1px solid;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* chat icon */
+.chat_icon{
+  position: absolute;
+  top: 30%;
+  left: 75%;
+}
+
+/* 塞nav的時候需要調整高度 */
+.header-toggle-mobile {
+  background: hsla(41, 52%, 64%, 0.8);
+  border-radius: 0 0 5px 5px;
+  height: 15px;
+  width: 33px;
+  position: absolute;
+  bottom: -14px;
+  right: 20%;
+  cursor: pointer;
+  z-index: 103;
+}
+/* 塞nav的時候需要調整高度 */
+
+.site-header-mobile.active .header-toggle-mobile {
+  transform: rotate(180deg);
+}
+.site-header-mobile.active .header-toggle-mobile:hover {
+  animation: .6s 1 forwards;
+}
+
+.header-toggle-mobile svg{
+  margin-left: 8px;
+  margin-bottom: 12px;
+}
+
+/* stream video content mobile */
+
+/* pc version noshow */
+
+.stream-video-container{
+  display: none;
+/* pc version noshow */
+}
+
+.stream-video-container-mobile{
+  position: fixed;
+  background-color:black;
+}
+
+.stream-video-row{
+ width: 375px;
+ display: flex;
+ flex-direction: column;
+}
+
+.stream-video-row iframe{
+    z-index: 1;
+    width:100%;
+    height: 212px;
+} 
+
+.display-none{
+  display: none;
+}  
+
+.deco-left{display: none;}
+.deco-right{display: none;}
+
+/* ---RWD桌機版：1920px--- */
+/* ---RWD桌機版：1920px--- */
+/* ---RWD桌機版：1920px--- */
+/* ---RWD桌機版：1920px--- */
+/* ---RWD桌機版：1920px--- */
+
+@media screen and (min-width: 1600px){
+
+  /* mobile version noshow */
+  .site-header-mobile{
+    display: none;
+  } 
+
+  /* .stream-video-container-mobile{
+    display: none;
+  } */
+
+  .header-toggle-mobile{
+    display: none;
+  }
+  /* mobile version noshow */
+
+  .stream-video-container{
+    display: block;
+  }
+
+  .stream-video-col-pc{
+    display: block;
+  }
+
+  .site-header{
+    display: block;
+  }
+  
+   /*-------- header --------*/
+   .site-header {
+    /* border: solid 1px red; */
+    background:rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: fixed;
+    left: 38%;
+    /* site-header all hiden */
+    transform: translateY(-100%);
+    width: 62.5%;
+    z-index: 101;
+  }
+  
+  #ike-icon,
+  #vox-icon,
+  #mysta-icon,
+  #luca-icon{
+    position:relative;
+    /* z-index: 120; */
+  }
+  
+  .site-header.active {
+    /* site-header all show */
+    transform: translateY(0);
+  }
+  
+  .site-nav {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .site-header-profile-wrap {
+    display: block;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    z-index: 1;
+  }
+  
+  .site-header-profile-wrap img{
+    z-index: 120;
+  }
+  
+  .site-nav img{
+    border: #D3B572 2px solid;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  /*--------- chat icon -------*/
+  .chat_icon{
+    position: absolute;
+    top: 65%;
+    left: 65%;
+    /* z-index: 6; */
+  }
+
+  .site-nav:before,
+  .site-nav:after {
+    content: '';
+    display: table;
+  }
+  
+  .site-nav:after {
+    clear: both;
+  }
+  
+  .site-header, .header-toggle{
+    transition: .3s all;
+  }
+  
+  .site-boundary {
+    /* margin: 0 auto; */
+    max-width: 1200px;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  .site-header.active .header-toggle {
+    transform: rotate(180deg);
+  }
+  .site-header.active .header-toggle:hover .header-toggle-icon {
+    animation: .6s 1 forwards;
+  }
+  
+  .header-toggle svg{
+    margin-left: 13px;
+  }
+  
+  .stream-video-container{
+    position: fixed;
+    width: 100%;
+  }
+  
+  .header-toggle {
+    background: hsla(41, 52%, 64%, 0.8);
+    border-radius: 0 0 5px 5px;
+    height: 30px;
+    width: 64px;
+    position: absolute;
+    bottom: -30px;
+    right: 25%;
+    cursor: pointer;
+  }
+ 
+  /*-------- stream video content -----------*/
+
+  .stream-video-container{
+    position: fixed;
+    background-color:black;
+  }
+  
+  /* .stream-video-row-pc {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .stream-video-col-pc{
+    width: 640px;
+    height: 500px;
+    margin: 0;
+    z-index: -1;
+  }
+
+  .stream-video-row-pc iframe{
+      z-index: 1;
+  }  */
+
+  .stream-video-row{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  ..stream-video-col{
+    width: 640px;
+  }
+  
+  .stream-video-row iframe{
+    z-index: -1;
+    width: 640px;
+    height: 500px;
+  } 
+  
+  .display-none{
+    display: none;
+  }  
+  
+  /* .stream-video-col-pc  */
+  .deco-right{
+    display: block;
+    position: absolute;
+    left:1500px;
+    top: 350px;
+    z-index: -3;
+  }
+  
+  .deco-left{
+    display: block;
+    position: absolute;
+    top:700px;
+    z-index: -2;
+  } 
+    }
+  
+

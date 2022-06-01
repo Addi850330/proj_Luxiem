@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/icon" href="./images/L-1.ico" />
+    <title>Luxiem</title>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 頁面css檔 -->
+    <link rel="stylesheet" href="./css/index.css" />
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./bootstrap-4.2.1-dist/css/bootstrap.css" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+    <style>
+        /* 下面是排排寫無限輪播牆 */
+        .index_item_style {
+
+            /* outline: 1px solid red; */
+        }
+
+        .index_item_style_content {
+            /* outline: 1px solid red; */
+            width: 375px;
+            position: relative;
+        }
+
+        .index_item_style_text_en {
+            font-size: 40px;
+            font-weight: 700;
+            color: #d3b572;
+            font-family: Kaisei Opti;
+            position: absolute;
+            top: -50px;
+            right: 70px;
+        }
+
+        .index_item_style_text_tc {
+            font-size: 24px;
+            font-weight: 500;
+            color: #fff;
+            position: absolute;
+            left: 39px;
+            bottom: 126px;
+        }
+
+        .index_item_style_content_row1,
+        .index_item_style_content_row2 {
+            width: 100%;
+            padding-left: 40px;
+            padding-right: 40px;
+
+        }
+
+        .index_item_style_content_row1_left_imgwrap img {
+            width: 135px;
+            height: 175px;
+        }
+
+        .index_item_style_content_row1_right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .index_item_style_content_row1_right_imgwrap img {
+            width: 135px;
+            height: 65px;
+        }
+
+        .index_item_style_content_row1_right_imgwrap2 img {
+            width: 135px;
+            height: 90px;
+        }
+
+        .index_item_style_content_row2 {
+            margin-top: 25px;
+        }
+
+        .index_item_style_content_row2_left_imgwrap img {
+            width: 195px;
+            height: 90px;
+        }
+
+        .index_item_style_content_row2_right_imgwrap img {
+            width: 75px;
+            height: 90px;
+        }
+
+        .index_item_style_seemore {
+            /* outline: 1px solid red; */
+            padding: 0 40px;
+
+        }
+
+        .index_item_style_seemore p {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            display: inline-block;
+            position: relative;
+        }
+
+        .index_item_style_seemore a {
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            /* outline: 1px solid red; */
+            padding-right: 20px;
+            padding-top: 25px;
+
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .index_item_style_seemore svg {
+            position: absolute;
+            left: 3px;
+            top: 18px;
+        }
+
+        .desktop_index_item_style_content {
+            display: none;
+        }
+
+        .desktop_index_item_style_carousel {
+            display: none;
+            /* outline: 1px solid red; */
+        }
+
+
+        /* 桌機版 */
+        @media screen and (min-width: 1140px) {
+
+            /* 下面是排排寫無限輪播牆 */
+            .desktop_index_item_style_content {
+                display: block;
+            }
+
+            .index_item_style_wrap {
+                overflow: hidden;
+            }
+
+            .index_item_style {
+                /* outline: 1px solid red; */
+                padding-top: 110px;
+            }
+
+            .index_item_style_content {
+                width: 690px;
+                /* outline: 1px solid red; */
+                margin-right: 50px;
+            }
+
+            .index_item_style_text_en {
+                font-size: 128px;
+                top: -153px;
+                right: 5px;
+            }
+
+            .index_item_style_text_tc {
+                font-size: 80px;
+                left: 0px;
+                bottom: 172px;
+            }
+
+            .index_item_style_content_row1,
+            .index_item_style_content_row2 {
+                width: 100%;
+                padding-left: 0px;
+                padding-right: 0px;
+
+            }
+
+
+
+            .index_item_style_content_row1_left_imgwrap img {
+                width: 310px;
+                height: 425px;
+            }
+
+            .index_item_style_content_row1_right_imgwrap img {
+                width: 318px;
+                height: 155px;
+            }
+
+            .index_item_style_content_row1_right_imgwrap2 img {
+                width: 318px;
+                height: 210px;
+            }
+
+            .index_item_style_content_row2 {
+                margin-top: 50px;
+            }
+
+            .index_item_style_content_row2_left_imgwrap img {
+                width: 450px;
+                height: 210px;
+            }
+
+            .index_item_style_content_row2_right_imgwrap img {
+                width: 180px;
+                height: 210px;
+            }
+
+            .index_item_style_seemore {
+                display: none;
+            }
+
+            /* Carousel動起來 */
+            .desktop_index_item_style_carousel {
+                display: block;
+                /* outline: 1px solid red; */
+            }
+
+            .index_item_style_carousel1 {
+                /* outline: 1px solid red; */
+                animation: scroll 60s linear infinite;
+            }
+
+            .index_item_style_carousel2 {
+                display: block;
+                animation: scroll2 60s linear infinite;
+                animation-delay: -30s;
+            }
+
+            @keyframes scroll {
+                from {
+                    transform: translateX(100%)
+                }
+
+                to {
+                    transform: translateX(-100%)
+                }
+            }
+
+            @keyframes scroll2 {
+                from {
+                    transform: translateX(0%)
+                }
+
+                to {
+                    transform: translateX(-200%)
+                }
+            }
+
+        }
+
+        /* 下面是排排寫組員小卡 手機版 */
+        .index_member_card_mobile {
+            background-color: #fff;
+            width: 100%;
+            /* outline: 1px solid red; */
+            padding: 40px 0;
+        }
+
+
+        .index_member_card_mobile_unit {
+            position: relative;
+            /* outline: 1px solid red; */
+        }
+
+        .index_member_card_mobile_unit p {
+            font-size: 14px;
+            font-weight: 700;
+            color: #000;
+            position: absolute;
+            left: 30px;
+            top: 9px;
+        }
+
+        .index_member_card_mobile_unit:hover p {
+            color: #d3b572;
+        }
+
+        .index_member_card_mobile_unit_imgwrap {
+            width: 150px;
+            height: 75px;
+            /* outline: 1px solid red */
+        }
+
+        .index_member_card_mobile_unit_imgwrap img {
+            width: 100%;
+        }
+
+        .index_member_card_textbox {
+            /* outline: 1px solid red; */
+            position: relative;
+        }
+
+        .index_member_card_mobile_unit .index_member_card_text1,
+        .index_member_card_mobile_unit .index_member_card_text2 {
+            font-size: 40px;
+            color: #d3b572;
+            font-family: Kaisei Opti;
+            margin-bottom: 0;
+        }
+
+        .index_member_card_mobile_unit .index_member_card_text1 {
+            position: absolute;
+            left: -3px;
+            top: -18px;
+        }
+
+        .index_member_card_mobile_unit .index_member_card_text2 {
+            position: absolute;
+            left: 100px;
+            top: 26px;
+        }
+
+        .index_member_card_desktop {
+            display: none;
+        }
+
+        /* 下面是排排寫組員小卡 桌機版 */
+        @media screen and (min-width: 1140px) {
+            .index_member_card_mobile {
+                display: none;
+            }
+
+            .index_member_card_desktop {
+                display: block;
+            }
+
+            .index_member_card_desktop {
+                background-color: #fff;
+                width: 100%;
+                /* outline: 1px solid red; */
+                padding: 100px 0;
+            }
+
+            .index_member_card_desktop_unit {
+                position: relative;
+                /* outline: 1px solid red; */
+            }
+
+            .index_member_card_desktop_unit p {
+                font-size: 32px;
+                font-weight: 700;
+                color: #000;
+                position: absolute;
+                left: 43px;
+                top: 4px;
+            }
+
+            .index_member_card_desktope_unit:hover p {
+                color: #d3b572;
+            }
+
+            .index_member_card_desktop_unit_imgwrap {
+                width: 225px;
+                height: 110px;
+                /* outline: 1px solid red */
+            }
+
+            .index_member_card_desktop_unit_imgwrap img {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- index -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- index_Bigtitle -->
+                <div class="index_Bigtitle d-flex justify-content-center">
+                    <img class="index_Bigtitle_img" src="./imgs/index/Luxiem.png" alt="" />
+                </div>
+
+                <!-- index_visual -->
+                <div class="index_visual">
+                    <!-- width="560" height="315" -->
+                    <iframe class="index_visual_video" src="https://www.youtube.com/embed/bdABx8gOhSs"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                    <!-- <video src="" autoplay loop muted ></video> -->
+
+                    <!-- index_visual_bc -->
+                    <div class="index_visual_bc_wrap">
+                        <div class="index_visual_bc"></div>
+                    </div>
+                    <!-- index_visual_chat -->
+                    <div class="index_visual_chat">
+                        <h3>聊天室</h3>
+                        <p><span class="mr-3">Casai卡特</span>好期待～終於要出道了！</p>
+                        <p><span class="mr-3">瑄瑄</span>這是新的團嗎？</p>
+                        <p><span class="mr-3">恩摁ㄣ</span>OMG 等好久了！</p>
+                        <p><span class="mr-3">Tonny</span>FINALLY 終於終於</p>
+                        <p><span class="mr-3">Enna 奇異鳥</span>聽起來不錯的公關團</p>
+                    </div>
+                </div>
+                <!-- index_text -->
+                <div class="index_text KaiseiOpti d-flex">
+                    <p class="index_text_up text-white">in the</p>
+                    <p class="index_text_dn fakegold">Dark</p>
+                </div>
+                <!-- index_circle_btn1 -->
+                <div class="index_circle_btn1">
+                    <div class="index_circle_btn_wrap">
+                        <div class="index_circle_btn_circle">
+                            <div class="index_arrow_1">
+                                <div class="index_arrow_text Primary">
+                                    <p>誰是你的靈魂伴侶？</p>
+                                    <svg viewBox="0 0 93 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M92.7071 8.09821C93.0976 7.70769 93.0976 7.07452 92.7071 6.684L86.3431 0.320037C85.9526 -0.0704874 85.3194 -0.0704874 84.9289 0.320037C84.5384 0.710561 84.5384 1.34373 84.9289 1.73425L90.5858 7.3911L84.9289 13.048C84.5384 13.4385 84.5384 14.0716 84.9289 14.4622C85.3195 14.8527 85.9526 14.8527 86.3431 14.4622L92.7071 8.09821ZM7.71589e-08 8.39111L92 8.3911L92 6.3911L-7.71589e-08 6.39111L7.71589e-08 8.39111Z"
+                                            fill="#D3B572" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <img class="vox_bg" src="./imgs/index/VOX-BG.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <!-- index_circle_btn2 -->
+                <div class="index_circle_btn2">
+                    <div class="index_circle_btn_wrap">
+                        <div class="index_circle_btn_circle">
+                            <div class="index_arrow_2">
+                                <div class="index_arrow_text Primary">
+                                    <p>你是Luxiem裡面的誰？</p>
+                                    <svg viewBox="0 0 93 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M92.7071 8.09821C93.0976 7.70769 93.0976 7.07452 92.7071 6.684L86.3431 0.320037C85.9526 -0.0704874 85.3194 -0.0704874 84.9289 0.320037C84.5384 0.710561 84.5384 1.34373 84.9289 1.73425L90.5858 7.3911L84.9289 13.048C84.5384 13.4385 84.5384 14.0716 84.9289 14.4622C85.3195 14.8527 85.9526 14.8527 86.3431 14.4622L92.7071 8.09821ZM7.71589e-08 8.39111L92 8.3911L92 6.3911L-7.71589e-08 6.39111L7.71589e-08 8.39111Z"
+                                            fill="#D3B572" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <img class="ike_bg" src="./imgs/index/IKE_BG.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- index_intro_count -->
+                <div class="index_intro_count">
+                    <div class="index_intro_count_wrap KaiseiOpti text-white ">
+                        <p class="fakegold">1</p>
+                        <p> ／ </p>
+                        <p> 5 </p>
+                    </div>
+                </div>
+
+                <!-- index_text_2 -->
+                <div class="index_text_2">
+                    <p class="index_text_2_up KaiseiOpti fakegold">Who?</p>
+                    <p class="index_text_2_dn text-white NotoSans">是誰？</p>
+                </div>
+
+                <!-- index_IKE_body -->
+                <div class="index_IKE_body">
+                    <div class="index_IKE_body_wrap">
+                        <img class="ike_body" src="./imgs/index/Ike_whole body.png" alt="" />
+                    </div>
+                    <img class="ike_shadow" src="./imgs/index/Ike_shadow.png" alt="" />
+                </div>
+
+
+
+                <!-- index_IKE_intro -->
+                <div class="index_IKE_intro">
+                    <div class="index_IKE_head">
+                        <img src="./imgs/index/Ike.png" alt="">
+                        <p><span class="color_ike index_IKE_head_title">
+                                Ike Eveland
+                            </span></p>
+                        <p class="text-white">來自過去的小說家，似乎有些自閉，當他有下一部作品的想法時，就會變成完全不同的人。</p>
+                        <a class="see_more fakegold" href="">See more</a>
+                        <div class="svg_link">
+                            <!-- YT-icon -->
+                            <svg class="YT-icon mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.54 6.42C22.4212 5.94541 22.1793 5.51057 21.8386 5.15941C21.498 4.80824 21.0707 4.55318 20.6 4.42C18.88 4 12 4 12 4C12 4 5.11999 4 3.39999 4.46C2.92924 4.59318 2.50197 4.84824 2.16134 5.19941C1.82071 5.55057 1.57878 5.98541 1.45999 6.46C1.14521 8.20556 0.991228 9.97631 0.999992 11.75C0.988771 13.537 1.14276 15.3213 1.45999 17.08C1.59095 17.5398 1.8383 17.9581 2.17814 18.2945C2.51797 18.6308 2.93881 18.8738 3.39999 19C5.11999 19.46 12 19.46 12 19.46C12 19.46 18.88 19.46 20.6 19C21.0707 18.8668 21.498 18.6118 21.8386 18.2606C22.1793 17.9094 22.4212 17.4746 22.54 17C22.8524 15.2676 23.0063 13.5103 23 11.75C23.0112 9.96295 22.8572 8.1787 22.54 6.42Z"
+                                    fill="#D3B572" />
+                                <path d="M9.75 15.02L15.5 11.75L9.75 8.47998V15.02Z" fill="black" />
+                            </svg>
+                            <!-- TW-icon -->
+                            <svg class="TW-icon mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23 3.00005C22.0424 3.67552 20.9821 4.19216 19.86 4.53005C19.2577 3.83756 18.4573 3.34674 17.567 3.12397C16.6767 2.90121 15.7395 2.95724 14.8821 3.2845C14.0247 3.61176 13.2884 4.19445 12.773 4.95376C12.2575 5.71308 11.9877 6.61238 12 7.53005V8.53005C10.2426 8.57561 8.50127 8.18586 6.93101 7.39549C5.36074 6.60513 4.01032 5.43868 3 4.00005C3 4.00005 -1 13 8 17C5.94053 18.398 3.48716 19.099 1 19C10 24 21 19 21 7.50005C20.9991 7.2215 20.9723 6.94364 20.92 6.67005C21.9406 5.66354 22.6608 4.39276 23 3.00005Z"
+                                    fill="#D3B572" />
+                            </svg>
+                            <!-- ST-icon -->
+                            <svg class="ST-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 1V23" stroke="#D3B572" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6"
+                                    stroke="#D3B572" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- index_square_btn -->
+                <div class="index_square_btn d-flex">
+                    <div class="index_square_btn_wrap">
+                        <p>voice 1</p>
+                        <p>voice 2</p>
+                        <p>voice 3</p>
+                        <p>voice 4</p>
+                    </div>
+                </div>
+
+
+                <!-- see_more_ph -->
+                <div class="see_more_ph">
+                    <a class="see_more fakegold" href="">See more</a>
+                </div>
+
+
+
+
+
+
+                <!-- index_intro_chevron_left -->
+                <div class="index_intro_chevron_left">
+                    <div class="index_intro_chevron_left_wrap">
+                        <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M41.25 49.5L24.75 33L41.25 16.5" stroke="#D3B572" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- index_intro_chevron_right -->
+                <div class="index_intro_chevron_right">
+                    <div class="index_intro_chevron_right_wrap">
+                        <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.75 49.5L41.25 33L24.75 16.5" stroke="#D3B572" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 下面是排排寫無限輪播牆 -->
+    <section class="index_item_style_wrap d-flex">
+
+        <!-- 下面是第一個車廂 -->
+        <div class="index_item_style d-flex index_item_style_carousel1">
+            <div class="index_item_style_content desktop_index_item_style_content">
+                <!-- <p class="index_item_style_text_en">Style</p>
+                <p class="index_item_style_text_tc">配件類型</p> -->
+                <div class="index_item_style_content_row2 d-flex justify-content-between mt-0">
+                    <div class="index_item_style_content_row2_left">
+                        <a href="#" class="index_item_style_content_row2_left_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="index_item_style_content_row2_right">
+                        <a href="#" class="index_item_style_content_row2_right_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_5.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="index_item_style_content_row1 d-flex justify-content-between mt-5">
+                    <div class="index_item_style_content_row1_left">
+                        <a href="#" class="index_item_style_content_row1_left_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="index_item_style_content_row1_right">
+                        <a href="#" class="index_item_style_content_row1_right_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_2.png" alt="">
+                        </a>
+                        <a href="#" class="index_item_style_content_row1_right_imgwrap2">
+                            <img src="./imgs/index/item_style/item_style_3.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="index_item_style_content">
+                <p class="index_item_style_text_en">Style</p>
+                <p class="index_item_style_text_tc">配件類型</p>
+                <div class="index_item_style_content_row1 d-flex justify-content-between">
+                    <div class="index_item_style_content_row1_left">
+                        <a href="#" class="index_item_style_content_row1_left_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="index_item_style_content_row1_right">
+                        <a href="#" class="index_item_style_content_row1_right_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_2.png" alt="">
+                        </a>
+                        <a href="#" class="index_item_style_content_row1_right_imgwrap2">
+                            <img src="./imgs/index/item_style/item_style_3.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="index_item_style_content_row2 d-flex justify-content-between">
+                    <div class="index_item_style_content_row2_left">
+                        <a href="#" class="index_item_style_content_row2_left_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="index_item_style_content_row2_right">
+                        <a href="#" class="index_item_style_content_row2_right_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_5.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="index_item_style_seemore">
+                    <a href="#">
+                        <p>看更多
+                            <svg width="44" height="16" viewBox="0 0 44 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M43.7069 8.70711C44.0974 8.31658 44.0974 7.68342 43.7069 7.29289L37.3429 0.928932C36.9524 0.538408 36.3192 0.538408 35.9287 0.928932C35.5382 1.31946 35.5382 1.95262 35.9287 2.34315L41.5855 8L35.9287 13.6569C35.5382 14.0474 35.5382 14.6805 35.9287 15.0711C36.3192 15.4616 36.9524 15.4616 37.3429 15.0711L43.7069 8.70711ZM0.0664062 9H42.9997V7H0.0664062V9Z"
+                                    fill="#D3B572" />
+                            </svg>
+                        </p>
+
+                    </a>
+                </div>
+            </div>
+
+            <!-- 再複製上面的一次 讓車廂滿版 -->
+            <div class="index_item_style_content desktop_index_item_style_content">
+                <!-- <p class="index_item_style_text_en">Style</p>
+                <p class="index_item_style_text_tc">配件類型</p> -->
+                <div class="index_item_style_content_row2 d-flex justify-content-between mt-0">
+                    <div class="index_item_style_content_row2_left">
+                        <a href="#" class="index_item_style_content_row2_left_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="index_item_style_content_row2_right">
+                        <a href="#" class="index_item_style_content_row2_right_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_5.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="index_item_style_content_row1 d-flex justify-content-between mt-5">
+                    <div class="index_item_style_content_row1_left">
+                        <a href="#" class="index_item_style_content_row1_left_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="index_item_style_content_row1_right">
+                        <a href="#" class="index_item_style_content_row1_right_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_2.png" alt="">
+                        </a>
+                        <a href="#" class="index_item_style_content_row1_right_imgwrap2">
+                            <img src="./imgs/index/item_style/item_style_3.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="index_item_style_content desktop_index_item_style_content">
+                <p class="index_item_style_text_en">Style</p>
+                <p class="index_item_style_text_tc">配件類型</p>
+                <div class="index_item_style_content_row1 d-flex justify-content-between">
+                    <div class="index_item_style_content_row1_left">
+                        <a href="#" class="index_item_style_content_row1_left_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="index_item_style_content_row1_right">
+                        <a href="#" class="index_item_style_content_row1_right_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_2.png" alt="">
+                        </a>
+                        <a href="#" class="index_item_style_content_row1_right_imgwrap2">
+                            <img src="./imgs/index/item_style/item_style_3.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="index_item_style_content_row2 d-flex justify-content-between">
+                    <div class="index_item_style_content_row2_left">
+                        <a href="#" class="index_item_style_content_row2_left_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="index_item_style_content_row2_right">
+                        <a href="#" class="index_item_style_content_row2_right_imgwrap">
+                            <img src="./imgs/index/item_style/item_style_5.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="index_item_style_seemore">
+                    <a href="#">
+                        <p>看更多
+                            <svg width="44" height="16" viewBox="0 0 44 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M43.7069 8.70711C44.0974 8.31658 44.0974 7.68342 43.7069 7.29289L37.3429 0.928932C36.9524 0.538408 36.3192 0.538408 35.9287 0.928932C35.5382 1.31946 35.5382 1.95262 35.9287 2.34315L41.5855 8L35.9287 13.6569C35.5382 14.0474 35.5382 14.6805 35.9287 15.0711C36.3192 15.4616 36.9524 15.4616 37.3429 15.0711L43.7069 8.70711ZM0.0664062 9H42.9997V7H0.0664062V9Z"
+                                    fill="#D3B572" />
+                            </svg>
+                        </p>
+
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 下面是第二個車廂 -->
+        <div class="desktop_index_item_style_carousel">
+            <div class="index_item_style d-flex index_item_style_carousel2">
+                <div class="index_item_style_content desktop_index_item_style_content">
+                    <!-- <p class="index_item_style_text_en">Style</p>
+                    <p class="index_item_style_text_tc">配件類型</p> -->
+                    <div class="index_item_style_content_row2 d-flex justify-content-between mt-0">
+                        <div class="index_item_style_content_row2_left">
+                            <a href="#" class="index_item_style_content_row2_left_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_4.png" alt="">
+                            </a>
+                        </div>
+                        <div class="index_item_style_content_row2_right">
+                            <a href="#" class="index_item_style_content_row2_right_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_5.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="index_item_style_content_row1 d-flex justify-content-between mt-5">
+                        <div class="index_item_style_content_row1_left">
+                            <a href="#" class="index_item_style_content_row1_left_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="index_item_style_content_row1_right">
+                            <a href="#" class="index_item_style_content_row1_right_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_2.png" alt="">
+                            </a>
+                            <a href="#" class="index_item_style_content_row1_right_imgwrap2">
+                                <img src="./imgs/index/item_style/item_style_3.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="index_item_style_content">
+                    <p class="index_item_style_text_en">Style</p>
+                    <p class="index_item_style_text_tc">配件類型</p>
+                    <div class="index_item_style_content_row1 d-flex justify-content-between">
+                        <div class="index_item_style_content_row1_left">
+                            <a href="#" class="index_item_style_content_row1_left_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="index_item_style_content_row1_right">
+                            <a href="#" class="index_item_style_content_row1_right_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_2.png" alt="">
+                            </a>
+                            <a href="#" class="index_item_style_content_row1_right_imgwrap2">
+                                <img src="./imgs/index/item_style/item_style_3.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="index_item_style_content_row2 d-flex justify-content-between">
+                        <div class="index_item_style_content_row2_left">
+                            <a href="#" class="index_item_style_content_row2_left_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_4.png" alt="">
+                            </a>
+                        </div>
+                        <div class="index_item_style_content_row2_right">
+                            <a href="#" class="index_item_style_content_row2_right_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_5.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="index_item_style_seemore">
+                        <a href="#">
+                            <p>看更多
+                                <svg width="44" height="16" viewBox="0 0 44 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M43.7069 8.70711C44.0974 8.31658 44.0974 7.68342 43.7069 7.29289L37.3429 0.928932C36.9524 0.538408 36.3192 0.538408 35.9287 0.928932C35.5382 1.31946 35.5382 1.95262 35.9287 2.34315L41.5855 8L35.9287 13.6569C35.5382 14.0474 35.5382 14.6805 35.9287 15.0711C36.3192 15.4616 36.9524 15.4616 37.3429 15.0711L43.7069 8.70711ZM0.0664062 9H42.9997V7H0.0664062V9Z"
+                                        fill="#D3B572" />
+                                </svg>
+                            </p>
+
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="index_item_style_content desktop_index_item_style_content">
+                    <!-- <p class="index_item_style_text_en">Style</p>
+                    <p class="index_item_style_text_tc">配件類型</p> -->
+                    <div class="index_item_style_content_row2 d-flex justify-content-between mt-0">
+                        <div class="index_item_style_content_row2_left">
+                            <a href="#" class="index_item_style_content_row2_left_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_4.png" alt="">
+                            </a>
+                        </div>
+                        <div class="index_item_style_content_row2_right">
+                            <a href="#" class="index_item_style_content_row2_right_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_5.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="index_item_style_content_row1 d-flex justify-content-between mt-5">
+                        <div class="index_item_style_content_row1_left">
+                            <a href="#" class="index_item_style_content_row1_left_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="index_item_style_content_row1_right">
+                            <a href="#" class="index_item_style_content_row1_right_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_2.png" alt="">
+                            </a>
+                            <a href="#" class="index_item_style_content_row1_right_imgwrap2">
+                                <img src="./imgs/index/item_style/item_style_3.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="index_item_style_content">
+                    <p class="index_item_style_text_en">Style</p>
+                    <p class="index_item_style_text_tc">配件類型</p>
+                    <div class="index_item_style_content_row1 d-flex justify-content-between">
+                        <div class="index_item_style_content_row1_left">
+                            <a href="#" class="index_item_style_content_row1_left_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="index_item_style_content_row1_right">
+                            <a href="#" class="index_item_style_content_row1_right_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_2.png" alt="">
+                            </a>
+                            <a href="#" class="index_item_style_content_row1_right_imgwrap2">
+                                <img src="./imgs/index/item_style/item_style_3.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="index_item_style_content_row2 d-flex justify-content-between">
+                        <div class="index_item_style_content_row2_left">
+                            <a href="#" class="index_item_style_content_row2_left_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_4.png" alt="">
+                            </a>
+                        </div>
+                        <div class="index_item_style_content_row2_right">
+                            <a href="#" class="index_item_style_content_row2_right_imgwrap">
+                                <img src="./imgs/index/item_style/item_style_5.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="index_item_style_seemore">
+                        <a href="#">
+                            <p>看更多
+                                <svg width="44" height="16" viewBox="0 0 44 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M43.7069 8.70711C44.0974 8.31658 44.0974 7.68342 43.7069 7.29289L37.3429 0.928932C36.9524 0.538408 36.3192 0.538408 35.9287 0.928932C35.5382 1.31946 35.5382 1.95262 35.9287 2.34315L41.5855 8L35.9287 13.6569C35.5382 14.0474 35.5382 14.6805 35.9287 15.0711C36.3192 15.4616 36.9524 15.4616 37.3429 15.0711L43.7069 8.70711ZM0.0664062 9H42.9997V7H0.0664062V9Z"
+                                        fill="#D3B572" />
+                                </svg>
+                            </p>
+
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- 下面是排排寫組員小卡 手機版 -->
+    <section class="index_member_card_mobile">
+        <div class="index_member_card_mobile_wrap">
+            <div class="index_member_card_mobile_row d-flex justify-content-center">
+                <a href="#" class="index_member_card_mobile_unit mr-3">
+                    <p>康晴</p>
+                    <div class="index_member_card_mobile_unit_imgwrap">
+                        <img src="./imgs/index/member_card/desktop_card_template.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="index_member_card_mobile_unit">
+                    <p>楊曉婷</p>
+                    <div class="index_member_card_mobile_unit_imgwrap">
+                        <img src="./imgs/index/member_card/desktop_card_template.png" alt="">
+                    </div>
+                </a>
+            </div>
+
+            <div class="index_member_card_mobile_row d-flex justify-content-center mt-3">
+                <a href="#" class="index_member_card_mobile_unit mr-3">
+                    <p>張堯瑄</p>
+                    <div class="index_member_card_mobile_unit_imgwrap">
+                        <img src="./imgs/index/member_card/desktop_card_template.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="index_member_card_mobile_unit">
+                    <p>劉丹儀</p>
+                    <div class="index_member_card_mobile_unit_imgwrap">
+                        <img src="./imgs/index/member_card/desktop_card_template.png" alt="">
+                    </div>
+                </a>
+            </div>
+
+            <div class="index_member_card_mobile_row d-flex justify-content-center mt-3">
+                <a href="#" class="index_member_card_mobile_unit mr-3">
+                    <p>蔡金恩</p>
+                    <div class="index_member_card_mobile_unit_imgwrap">
+                        <img src="./imgs/index/member_card/desktop_card_template.png" alt="">
+                    </div>
+                </a>
+                <div class="index_member_card_mobile_unit">
+                    <div class="index_member_card_mobile_unit_imgwrap index_member_card_textbox">
+                        <p class="index_member_card_text1">Contact</p>
+                        <p class="index_member_card_text2">Us</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下面是排排寫組員小卡 桌機版 -->
+    <section class="index_member_card_desktop">
+        <div class="index_member_card_desktop_wrap">
+            <div class="index_member_card_desktop_row d-flex justify-content-center">
+                <a href="#" class="index_member_card_desktop_unit mr-5">
+                    <p>康晴</p>
+                    <div class="index_member_card_desktop_unit_imgwrap">
+                        <img src="./imgs/index/member_card/desktop_card_template.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="index_member_card_desktop_unit mr-5">
+                    <p>楊曉婷</p>
+                    <div class="index_member_card_desktop_unit_imgwrap">
+                        <img src="./imgs/index/member_card/desktop_card_template.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="index_member_card_desktop_unit">
+                    <p>張堯瑄</p>
+                    <div class="index_member_card_desktop_unit_imgwrap">
+                        <img src="./imgs/index/member_card/desktop_card_template.png" alt="">
+                    </div>
+                </a>
+            </div>
+
+            <div class="index_member_card_desktop_row d-flex justify-content-center mt-5">
+                <a href="#" class="index_member_card_desktop_unit mr-5">
+                    <p>劉丹儀</p>
+                    <div class="index_member_card_desktop_unit_imgwrap">
+                        <img src="./imgs/index/member_card/desktop_card_template.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="index_member_card_desktop_unit">
+                    <p>蔡金恩</p>
+                    <div class="index_member_card_desktop_unit_imgwrap">
+                        <img src="./imgs/index/member_card/desktop_card_template.png" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+
+</html>

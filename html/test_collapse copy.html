@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapse 測試版2 OK!!!</title>
+
+    <!-- 連結主要的css檔 -->
+    <!-- <link rel="stylesheet" href="./Vtuber_main.css"> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+
+
+    <style>
+        .wrapper {
+            display: flex;
+            /* padding-top: 50px; */
+            justify-content: center;
+        }
+        .collapsible {
+            /* max-width: 450px; */
+            width: 80%;
+            overflow: hidden;
+            font-weight: 500;
+        }
+        .collapsible input {
+            display: none;
+        }
+
+        .collapsible label {
+            font-size: 20px;
+            position: relative;
+            font-weight: 600;
+            background: #aaa;
+            /* box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08); */
+            color: #fff;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding:  10px;
+            border-bottom: 2px solid #D3B572;
+            z-index: 1;
+        }
+        .collapsible label:after {
+            content: "";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            width: 18px;
+            height: 18px;
+            background: url(./icons/angle-down-solid.svg) no-repeat 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .collapsible input:checked + label:after {
+            transform: rotate(180deg);
+        }
+
+        .collapsible-text {
+            min-height: 1px;
+            overflow: hidden;
+            /* border-radius: 4px; */
+            /* line-height: 1.4; */
+            position: relative;
+            top: -100%;
+            opacity: .5;
+            transition: all 0.3s ease;
+        }
+        .collapsible-text p {
+            font-size: 20px;
+        }
+
+        .collapsible input:checked ~ .collapsible-text {
+            /* outline: 1px solid red; */
+            max-height: 300px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            /* background: #fff; */
+            /* box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08); */
+            opacity: 1;
+            top: 0;
+        }
+
+        .collapsible-text p {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head1">
+            <label for="collapsible-head1">Q1：金幣禮包購買流程？</label>
+            <div class="collapsible-text">
+                <p>點選欲購買的禮包→選擇支付方式→完成禮包購買→成立購買訂單→寄送信箱確認信</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head2">
+            <label for="collapsible-head2">Q2：購買金幣禮包的支付方式？</label>
+            <div class="collapsible-text">
+                <p>您可以選擇信用卡支付，或選擇第三方支付平台（LINE Pay, Apple Pay）購買金幣禮包</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head3">
+            <label for="collapsible-head3">Q3：信用卡付款注意事項？</label>
+            <div class="collapsible-text">
+                <p>目前接受台灣地區及國外發行的VISA、MASTERCARD、JCB、美國運通、聯合信用卡及銀聯卡，使用上依實際授權為主</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.2.1-dist/js/bootstrap.bundle.js"></script>
+
+    
+
+</body>
+
+</html>

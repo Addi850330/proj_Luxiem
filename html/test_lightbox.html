@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightbox 光箱測試版</title>
+
+    <!-- 連結主要的css檔 -->
+    <!-- <link rel="stylesheet" href="./Vtuber_main.css"> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+
+
+    <style>
+        .amg1 {
+            width: 350vh;
+            height: 150vh;
+            position: fixed;
+            background-color: rgb(0, 0, 0, 0.6);
+            z-index: 3;
+        }
+
+        .amos {
+            width: 280px;
+            height: 400px;
+            background-color: rgb(231, 230, 230);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        .text {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            position: absolute;
+            right: -5px;
+            top: -5px;
+        }
+
+        .text a {
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+
+        .hide {
+            display: none;
+        }
+
+        .lottery-con {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .lottery-con canvas {
+            /* background: url(./img/lottery.gif) no-repeat center center/100% 100%;
+            cursor: crosshair; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="amg1">
+        <div class="amos">
+            <strong>開幕慶!
+            </strong>
+            <div class="lottery-con">
+                <canvas id="zwhCanvas" width="280" height="400"></canvas>
+            </div>
+            <div class="text">
+                <a href="#" class="text1">X</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.2.1-dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        $('.text').click(function(){
+            console.log('hi');
+            $('.amg1').addClass('hide');
+        })
+    </script>
+
+</body>
+
+</html>

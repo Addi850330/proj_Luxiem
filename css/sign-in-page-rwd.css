@@ -1,0 +1,52 @@
+@media screen and (min-width: 1920px){
+.mc-bg .container{
+    width: 55%;
+    padding-top: 15%;
+    margin-right: 0;
+    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+.mc-bg .container form{
+    width: 50%;
+}
+.mc-logo{
+    display: none;
+}
+.mc-link .sign-in{
+    border-bottom: solid 2px #D3B572;
+    padding: 10px 70px;
+    font-size: 24px;
+}
+.mc-link .sign-up{
+    border-bottom: solid 1px #D3B572;
+    padding: 10px 70px;
+    font-size: 24px;
+    border-bottom: solid 1px #D3B572;
+}
+.container form div{
+    margin-top: 54px;
+}
+.Icon-inside input{
+    height: 55px;
+}
+.mc-btn{
+    height: 55px;
+}
+.sing-in-img{
+    display: block;
+}
+.small-polygon{
+    width: 75px;
+    right: 13%;
+    top: 82%;
+}
+.big-polygon{
+    width: 100px;
+    right: 14%;
+    top: 78%;
+}
+}
+@media screen and (max-width: 1920px){
+.sign-in-footer{
+    display: none;
+}
+}
